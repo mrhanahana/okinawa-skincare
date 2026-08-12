@@ -21,7 +21,7 @@ get_header();
   ?>
     <div class="index_title pt50">
       <h2 class="headline rich_font_type2">CAMPAIGN</h2>
-      <h3 class="catch rich_font_type3">キャンペーンa</h3>
+      <h3 class="catch rich_font_type3">キャンペーン</h3>
     </div>
     <div id="news_header_banner">
       <div id="index_campaign_slider_top" class="clearfix">

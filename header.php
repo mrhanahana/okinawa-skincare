@@ -27,7 +27,7 @@
     if (is_singular()) wp_enqueue_script('comment-reply'); ?>
     <?php wp_head(); ?>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics testtttt -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-240830134-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

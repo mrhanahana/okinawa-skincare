@@ -28,13 +28,22 @@
     <?php wp_head(); ?>
 
     <<<<<<< HEAD
+      <<<<<<< HEAD
       <!-- Global site tag (gtag.js) - Google Analytics -->
       =======
       <!-- Global site tag (gtag.js) - Google Analyticsssssssssssssssssssssssssssssssssss -->
       >>>>>>> renewal
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-240830134-1"></script>
       <script>
-        window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || []; ===
+        === = <
+        !--Global site tag(gtag.js) - Google Analytics-- >
+          <
+          script async src = "https://www.googletagmanager.com/gtag/js?id=UA-240830134-1" >
+      </script>
+      <script>
+        window.dataLayer = window.dataLayer || []; >>>
+        >>> > renewal
 
         function gtag() {
           dataLayer.push(arguments);
@@ -90,7 +99,7 @@
       </noscript>
       <!-- End Meta Pixel Code -->
 
-      <!-- Event snippet for 通話ボタンをクリック conversion pageaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiueokakikukekooooooooooooooo -->
+      <!-- Event snippet for 通話ボタンをクリック conversion page -->
       <script>
         function gtag_tel_conversion(url) {
           var callback = function() {

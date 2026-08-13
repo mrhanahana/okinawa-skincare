@@ -86,7 +86,7 @@
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Event snippet for 通話ボタンをクリック conversion pageaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiueokakikukeko -->
+    <!-- Event snippet for 通話ボタンをクリック conversion pageaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiueokakikukekooooooooooooooo -->
     <script>
       function gtag_tel_conversion(url) {
         var callback = function() {

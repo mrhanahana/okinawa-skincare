@@ -1,4 +1,3 @@
-<!-- merge test -->
 <?php $options = get_design_plus_option(); ?>
 <!DOCTYPE html>
 <html class="<?php echo wp_is_mobile() ? 'mobile' : 'pc'; ?>" <?php language_attributes(); ?>>

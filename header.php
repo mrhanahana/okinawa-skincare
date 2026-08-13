@@ -27,7 +27,7 @@
     if (is_singular()) wp_enqueue_script('comment-reply'); ?>
     <?php wp_head(); ?>
 
-    <!-- Global site tag (gtag.js) - Google Analyticsssssssssssssssssssssssssssssssssss -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-240830134-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -86,7 +86,7 @@
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Event snippet for 通話ボタンをクリック conversion pageaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiueokakikukekooooooooooooooo -->
+    <!-- Event snippet for 通話ボタンをクリック conversion page -->
     <script>
       function gtag_tel_conversion(url) {
         var callback = function() {

@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* ========================================
+   flex
+======================================== */
+.flex, .flexA, .flexB, .flexC, .flexE, .flexS {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexA {
+  justify-content: space-around;
+}
+.flexB {
+  justify-content: space-between;
+}
+.flexC {
+  justify-content: center;
+}
+.flexE {
+  justify-content: space-evenly;
+}
+.flexS {
+  justify-content: flex-start;
+}
+
+/* ========================================
+   grid
+======================================== */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 599px) {
+  .grid {
+    grid-template-columns: inherit;
+  }
+}

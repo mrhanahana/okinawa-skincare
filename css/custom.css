@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* ========================================
+   common
+======================================== */
+/* ========================================
+   Haeder
+======================================== */
+#menu_button {
+  position: absolute;
+  z-index: 50;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  font-size: 11px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+/* ========================================
+   footer
+======================================== */
+
+
+
+

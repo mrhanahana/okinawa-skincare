@@ -1,0 +1,466 @@
+@charset "utf-8";
+/* ========================================
+   front-page
+======================================== */
+/* wrapper
+---------------------------*/
+section .content-wrap {
+  max-width: 1680px;
+  width: 96%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+section .content-wrap .common-inner {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 80px;
+}
+/* キャンペーン
+---------------------------*/
+section#campaign {
+  padding: 0 0 120px;
+}
+/* 施術メニュー共通
+---------------------------*/
+section.search {
+  background: #f5f1ee;
+}
+section.search .content-wrap {
+  padding: 0 0 60px;
+}
+section.search .headLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  font-size: max(10px, 2.0rem);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-family: YakuHanMP, "Noto Serif JP", serif;
+}
+/* お悩みから探す
+---------------------------*/
+section.search .headLine::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  background-size: contain;
+  vertical-align: middle;
+}
+section.search .trouble .headLine::before {
+  background: url("../img/img_ico_trouble.svg") no-repeat center center;
+}
+section.search .treatment .headLine::before {
+  background: url("../img/img_ico_treatment.svg") no-repeat center center;
+}
+section.search .trouble .headLine {
+  color: #bf7376;
+}
+section.search .treatment .headLine {
+  color: #7f658a;
+}
+section.search .trouble, section.search .treatment {
+  width: 49%;
+  margin-bottom: 50px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+section.search .trouble {
+  width: 59%;
+  background: #fdf6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.search .treatment {
+  width: 39%;
+  background: #f9f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.search .trouble .troubleList li {
+  margin: 0 5px 10px;
+  width: calc(24% - 5px);
+  min-width: 140px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.5s;
+}
+section.search .trouble .troubleList li.transparent {
+  opacity: 0;
+}
+section.search .trouble .troubleList a {
+  padding: 5px;
+  display: block;
+  text-align: center;
+  font-size: max(10px, 1.2rem);
+  box-sizing: border-box;
+}
+section.search .trouble .troubleList li:hover {
+  transform: translateY(-5px);
+}
+section.search .trouble .troubleList a img {
+  width: 100%;
+}
+section.search .trouble .troubleList a .title {
+  position: relative;
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 0 0 15px 0;
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(0 0 0 / 0) 0%, rgba(0 0 0 / 0) 42%, #bf7376 42%, #bf7376 58%, rgba(0 0 0 / 0) 58%, rgba(0 0 0 / 0) 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+section.search .trouble .button-invert {
+  color: #bf7376;
+  background-color: transparent;
+  border: 1px solid #bf7376;
+}
+section.search .trouble .button-invert:hover {
+  color: #fff;
+  background-color: #bf7376;
+}
+@media (max-width: 425px) {
+	section.search .trouble .troubleList a {
+    font-size: 1.0rem;
+}
+}
+/* 施術から探す
+---------------------------*/
+section.search .treatmentList.accordion-area > li {
+  border: none;
+  background: #fff;
+  border-radius: 10px;
+  margin: 5px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+section.search .treatmentItem {
+  padding-left: 1.5rem;
+}
+section.search .treatmentItem li {
+  border: none;
+  width: 50%;
+  list-style: disc;
+}
+section.search .treatmentItem li::marker {
+  color: #7f658a;
+}
+section.search .treatmentItem li a {
+  position: relative;
+}
+section.search .treatmentItem li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+section.search .treatmentItem li a:hover::after {
+  transform: scale(1, 1);
+}
+section.search .treatmentList.accordion-area .title {
+  display: block;
+}
+section.search .treatmentList.accordion-area > li:hover {
+  background: #f9ebff;
+}
+section.search .treatmentList.accordion-area a.title.no-child::before {
+  transform: rotate(45deg) translateX(0);
+  transition: transform 0.3s;
+}
+section.search .treatmentList.accordion-area a.title.no-child:hover {
+  transform: translateX(5px);
+}
+section.search .treatmentList.accordion-area a.title.no-child:hover::before {
+  transform: translateX(5px) rotate(45deg);
+}
+section.search .treatment .button-invert {
+  color: #7f658a;
+  background-color: transparent;
+  border: 1px solid #7f658a;
+}
+section.search .treatment .button-invert:hover {
+  color: #fff;
+  background-color: #7f658a;
+}
+@media (max-width: 1023px) {
+  section.search .info {
+    display: block;
+  }
+  section.search .trouble, section.search .treatment {
+    width: auto;
+  }
+}
+/* Concept
+---------------------------*/
+
+/* Doctor
+---------------------------*/
+section.home-doctor {
+  position: relative;
+  background: url("../img/img_home_doctor_bg.svg") center no-repeat;
+  background-size: cover;
+}
+section.home-doctor .content-wrap {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 35% 30% 1fr;
+  grid-template-areas: "image content profile";
+  max-width: 1600px;
+  padding: 120px 0 0 0;
+  margin-right: 100px;
+}
+section.home-doctor .doctor-image {
+  grid-area: image;
+  position: relative;
+}
+section.home-doctor .doctor-image img {
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+  max-width: 600px;
+}
+section.home-doctor .doctor-content {
+  position: relative;
+  grid-area: content;
+}
+section.home-doctor .doctor-content .headline, section.home-doctor .doctor-content .catch {
+  text-align: left;
+}
+section.home-doctor .doctor-catch {
+  margin: 40px 0;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+section.home-doctor .doctor-message {
+  font-size: 1.0rem;
+  line-height: 2.2;
+}
+section.home-doctor .doctor-name {
+  margin: 10px 0 150px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+section.home-doctor .doctor-sign {
+  position: relative;
+}
+section.home-doctor .doctor-name span {
+  font-size: 1.2rem;
+  margin-left: 30px;
+  color: #555555;
+}
+section.home-doctor .position {
+  margin: 50px 0 0;
+  font-size: 1.2rem;
+}
+section.home-doctor .sign {
+  position: absolute;
+  bottom: -60px;
+  right: -50px;
+  transform: rotate(350deg);
+  font-size: 5rem;
+  font-family: "filmotype-lacrosse", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ccb07a;
+  opacity: .8;
+}
+section.home-doctor .index_cb_button a {
+  color: #ffffff;
+  background: #c9ab53;
+}
+section.home-doctor .index_cb_button a:hover {
+  background: #66572a;
+}
+.doctor-profile {
+  grid-area: profile;
+  margin: 0 0 60px;
+  padding: 40px;
+  background: rgb(255, 255, 255, 0.3);
+  border: 1px solid #e7dbc1;
+  border-radius: 10px;
+  height: fit-content;
+}
+.doctor-profile .title {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.doctor-profile .item:not(:last-child) {
+  margin-bottom: 35px;
+}
+.doctor-profile ul li {
+  line-height: 2;
+}
+section.home-doctor .doctor-image-sp, section.home-doctor .index_cb_button.sp {
+  display: none;
+}
+@media (max-width: 1250px) {
+  section.home-doctor .content-wrap {
+    grid-template-columns: 40% 1fr;
+    grid-template-areas:
+      "image content"
+      "profile profile";
+    margin: 0;
+  }
+  section.home-doctor .sign {
+    right: auto;
+    left: 18%;
+  }
+  .doctor-profile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  section.home-doctor .content-wrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "image"
+      "profile";
+    margin: 0 auto;
+  }
+  section.home-doctor .doctor-image img.pc {
+    display: none;
+  }
+  section.home-doctor .doctor-catch {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  section.home-doctor .doctor-content .headline, section.home-doctor .doctor-content .catch {
+    text-align: center;
+  }
+  section.home-doctor .doctor-sign {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  section.home-doctor .sign {
+    position: relative;
+    right: 10px;
+    left: auto;
+    bottom: -10px;
+    font-size: 3rem;
+  }
+  section.home-doctor .position {
+    font-size: 0.8rem;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+  section.home-doctor .doctor-name {
+    display: block;
+    margin-bottom: 0;
+  }
+  section.home-doctor .doctor-name span {
+    margin: 10px 0 0;
+    display: block;
+    font-size: 1.0rem;
+  }
+  section.home-doctor .index_cb_button.pc {
+    display: none;
+  }
+  section.home-doctor .doctor-image-sp {
+    display: block;
+    text-align: center;
+  }
+  section.home-doctor .doctor-image-sp img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  section.home-doctor .index_cb_button.sp {
+    display: block;
+    margin-top: 0 !important;
+  }
+  .doctor-profile {
+    margin-top: 20px;
+    border-left: 1px solid #e7dbc1;
+    border-radius: 10px;
+  }
+}
+/* お知らせ
+---------------------------*/
+
+/* アクセス
+---------------------------*/
+section#access {
+  background: #f5f1ee;
+  padding: 120px 0;
+  font-size: 16px;
+}
+section#access .map-area {
+  width: 50%;
+}
+section#access .map-area .map {
+  position: relative;
+  padding-bottom: 400px;
+  height: 0;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+section#access .map-area .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section#access .text-area {
+  width: calc(50% - 5rem);
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+section#access .index_title > * {
+  text-align: left;
+}
+section#access dl {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem 2rem;
+  line-height: 1.8rem;
+}
+section#access dl dd strong {
+  color: #66572a;
+}
+@media (max-width: 999px) {
+  section#access {
+    padding: 60px 0;
+  }
+  section#access > div {
+    flex-direction: column-reverse;
+  }
+  section#access .index_title > * {
+    text-align: center;
+  }
+  section#access .text-area {
+    width: auto;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+  }
+  section#access .map-area {
+    width: auto;
+  }
+}

@@ -29,8 +29,6 @@ add_action('wp_head', 'child_end_head_buffer', 99999);
 require_once get_stylesheet_directory() . '/inc/enqueue.php';
 
 
-
-
 /************************************************************************************** 
 /* ドロワーメニュー用メニュー位置を追加 */
 /**************************************************************************************/
@@ -41,6 +39,19 @@ function child_register_drawer_menu() {
     );
 }
 add_action('after_setup_theme', 'child_register_drawer_menu');
+
+/************************************************************************************** 
+/* head.phpをカスタム */
+/**************************************************************************************/
+// 子テーマ版 head.php を読み込む
+require_once get_stylesheet_directory() . '/functions/head.php';
+
+
+// 親テーマ版 tcd_head を停止
+add_action('after_setup_theme', function () {
+    remove_action('wp_head', 'tcd_head');
+}, 20);
+
 
 
 // 列の追加

@@ -2,34 +2,22 @@
 $options = get_design_plus_option();
 get_header();
 ?>
-<div id="news_header">
-  <?php
-  $post_num = $options['index_campaign_num'];
-  $categuory_type = $options['index_campaign_category_type'];
-  if ($category_type == 0) {
+<section class="campaign">
+  <div class="campaign__wrap">
+    <?php
+    $post_num = $options['index_campaign_num'];
     $args = array('post_type' => 'campaign', 'posts_per_page' => $post_num);
-  } else {
-    $args = array(
-      'post_type' => 'campaign',
-      'posts_per_page' => $post_num,
-      'tax_query' => array(array('taxonomy' => 'campaign_category', 'field' => 'term_id', 'terms' => $category_type))
-    );
-  }
-  $campaign_query = new WP_Query($args);
-  if ($campaign_query->have_posts()):
-    // slider -----
-  ?>
-    <div class="index_title pt50">
-      <h2 class="headline rich_font_type2">CAMPAIGN</h2>
-      <h3 class="catch rich_font_type3">キャンペーン</h3>
-    </div>
-    <div id="news_header_banner">
+    $campaign_query = new WP_Query($args);
+    if ($campaign_query->have_posts()):
+      // slider -----
+    ?>
+
+      <h2 class="heading gold">Campaign</h2>
       <div id="index_campaign_slider_top" class="clearfix">
+
         <?php
         $i = 1;
         while ($campaign_query->have_posts()): $campaign_query->the_post();
-          $campaign_category = get_the_terms($post->ID, 'campaign_category');
-          $campaign_desc = get_post_meta($post->ID, 'campaign_desc', true);
           if (has_post_thumbnail()) {
             $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'size2');
           } elseif ($options['no_image2']) {
@@ -40,49 +28,221 @@ get_header();
           }
         ?>
           <article class="item item<?php echo $i; ?> clearfix">
-            <?php if ($campaign_category && $options['show_index_campaign_category']) { ?>
-              <div class="category">
-                <?php foreach ($campaign_category as $cat) : ?>
-                  <a class="campaign_cat_id<?php echo esc_attr($cat->term_id); ?>" href="<?php echo esc_url(get_term_link($cat, 'campaign_category')); ?>"><?php echo esc_html($cat->name); ?></a>
-                <?php endforeach; ?>
-              </div>
-            <?php }; ?>
             <a class="link animate_background" href="<?php the_permalink() ?>" style="background:none;">
               <div class="top_area">
-                <!--<div class="title_area frost_bg">
-            <h4 class="title rich_font"><span>
-              <?php the_title(); ?>
-              </span></h4>
-            <div class="blur_image"> <img class="image object_fit" src="<?php echo esc_attr($image[0]); ?>" data-src="<?php echo esc_attr($image[0]); ?>"> </div>
-          </div>-->
                 <img class="image normal_image object_fit" src="<?php echo esc_attr($image[0]); ?>">
               </div>
-              <?php if ($campaign_desc && $options['show_index_campaign_desc']) { ?>
-                <p class="desc"><?php echo wp_strip_all_tags(trim_desc($campaign_desc, 40)); ?></p>
-              <?php }; ?>
             </a>
           </article>
         <?php $i++;
         endwhile; ?>
       </div>
+      <!-- END #index_campaign_slider_area -->
+    <?php endif;
+    wp_reset_query(); ?>
+  </div>
+</section>
+<section class="search">
+  <div class="content-wrap">
+    <div class="info flexB">
+      <div class="trouble">
+        <div>
+          <h3 class="headLine">お悩みから探す</h3>
+          <ul class="troubleList flexE mb50">
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_acne.jpg" /></div>
+                <div class="title">にきび・にきび跡</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_dullness.jpg" /></div>
+                <div class="title">しみ・くすみ</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_melasma.jpg" /></div>
+                <div class="title">肝斑</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_rosacea.jpg" /></div>
+                <div class="title">赤ら顔・酒さ</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_moles.jpg" /></div>
+                <div class="title">ほくろ、イボ</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_pores.jpg" /></div>
+                <div class="title">毛穴</div>
+              </a> </li>
+            <li> <a href="">
+                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble_wrinkles.jpg" /></div>
+                <div class="title">しわ・たるみ</div>
+              </a> </li>
+            <li class="transparent"> </li>
+            <li class="transparent"> </li>
+          </ul>
+        </div>
+        <a class="button-invert w90">すべてのお悩みを見る</a>
+      </div>
+      <div class="treatment">
+        <div>
+          <h3 class="headLine">施術から探す</h3>
+          <ul class="treatmentList accordion-area mb50">
+            <li>
+              <div class="title">機械治療</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">ノーリス</a></li>
+                  <li><a href="">Ｑスイッチレーザー</a></li>
+                  <li><a href="">ＣＯ２レーザー</a></li>
+                  <li><a href="">トーニング</a></li>
+                  <li><a href="">ダーマペン</a></li>
+                  <li><a href="">レーザーフェイシャル</a></li>
+                  <li><a href="">水光注射</a></li>
+                  <li><a href="">ハイフ</a></li>
+                  <li><a href="">ハイドラフェイシャル</a></li>
+                  <li><a href="">エレクトロポレーション</a></li>
+                  <li><a href="">イオン導入</a></li>
+                  <li><a href="">オムニラックス</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">注入治療</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
+                  <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
+                  <li><a href="">脂肪溶解注射（カベリン）</a></li>
+                  <li><a href="">肌育注射</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">美肌治療</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">ピーリング</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">糸リフト</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">テスリフト</a></li>
+                  <li><a href="">ＱＴＬ</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">脱毛</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">医療脱毛</a></li>
+                  <li><a href="">メンズ医療脱毛</a></li>
+                </ul>
+              </div>
+            </li>
+            <li> <a class="title no-child" href="">点滴・注射</a> </li>
+            <li>
+              <div class="title">ダイエット</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">GLP1ダイエット</a></li>
+                </ul>
+              </div>
+            </li>
+            <li> <a class="title no-child" href="">アートメイク</a> </li>
+            <li>
+              <div class="title">薄毛治療</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">男性の薄毛治療</a></li>
+                  <li><a href="">女性の薄毛治療</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">ピアス</div>
+              <div class="box">
+                <ul class="treatmentItem flexB">
+                  <li><a href="">軟骨ピアス</a></li>
+                  <li><a href="">耳たぶ</a></li>
+                  <li><a href="">ボディーピアス</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a class="button-invert w90">すべての施術を見る</a>
+      </div>
     </div>
-    <!-- END #index_campaign_slider_area -->
-  <?php endif;
-  wp_reset_query(); ?>
-  <div id="news_header_inner">
-    <?php
-    $catch = $options['index_news_catch'];
-    $desc = $options['index_news_desc'];
-    $catch_mobile = $options['index_news_catch_mobile'];
-    $desc_mobile = $options['index_news_desc_mobile'];
-    ?>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<div id="news_header_inner">
+  <?php
+  $catch = $options['index_news_catch'];
+  $desc = $options['index_news_desc'];
+  $catch_mobile = $options['index_news_catch_mobile'];
+  $desc_mobile = $options['index_news_desc_mobile'];
+  ?>
+  <?php if ($catch || $desc) { ?>
+    <?php if ($catch) { ?>
+      <h2 id="news_headline_top" class="catch<?php if ($catch_mobile) {
+                                                echo ' has_mobile_word';
+                                              }; ?>" <?php if ($catch_mobile) {
+                                                        echo ' data-label="' . nl2br(esc_html($catch_mobile)) . '"';
+                                                      }; ?>><span class="rich_font"><?php echo wp_kses_post(nl2br($catch)); ?></span>
+      <?php }; ?>
+      <?php if ($desc) { ?>
+        <span class="desc<?php if ($desc_mobile) {
+                            echo ' has_mobile_word';
+                          }; ?>" <?php if ($desc_mobile) {
+                                    echo ' data-label="' . nl2br(esc_html($desc_mobile)) . '"';
+                                  }; ?>><?php echo nl2br(esc_html($desc)); ?></span>
+      </h2>
+    <?php }; ?>
+  <?php }; ?>
+  <div id="news_header_list">
     <?php if ($catch || $desc) { ?>
       <?php if ($catch) { ?>
-        <h2 id="news_headline_top" class="catch<?php if ($catch_mobile) {
-                                                  echo ' has_mobile_word';
-                                                }; ?>" <?php if ($catch_mobile) {
-                                                          echo ' data-label="' . nl2br(esc_html($catch_mobile)) . '"';
-                                                        }; ?>><span class="rich_font"><?php echo wp_kses_post(nl2br($catch)); ?></span>
+        <h2 class="catch<?php if ($catch_mobile) {
+                          echo ' has_mobile_word';
+                        }; ?>" <?php if ($catch_mobile) {
+                                  echo ' data-label="' . nl2br(esc_html($catch_mobile)) . '"';
+                                }; ?>><span class="rich_font"><?php echo wp_kses_post(nl2br($catch)); ?></span>
         <?php }; ?>
         <?php if ($desc) { ?>
           <span class="desc<?php if ($desc_mobile) {
@@ -93,49 +253,31 @@ get_header();
         </h2>
       <?php }; ?>
     <?php }; ?>
-    <div id="news_header_list">
-      <?php if ($catch || $desc) { ?>
-        <?php if ($catch) { ?>
-          <h2 class="catch<?php if ($catch_mobile) {
-                            echo ' has_mobile_word';
-                          }; ?>" <?php if ($catch_mobile) {
-                                    echo ' data-label="' . nl2br(esc_html($catch_mobile)) . '"';
-                                  }; ?>><span class="rich_font"><?php echo wp_kses_post(nl2br($catch)); ?></span>
-          <?php }; ?>
-          <?php if ($desc) { ?>
-            <span class="desc<?php if ($desc_mobile) {
-                                echo ' has_mobile_word';
-                              }; ?>" <?php if ($desc_mobile) {
-                                        echo ' data-label="' . nl2br(esc_html($desc_mobile)) . '"';
-                                      }; ?>><?php echo nl2br(esc_html($desc)); ?></span>
-          </h2>
-        <?php }; ?>
-      <?php }; ?>
-      <?php
-      $post_num = 5;
-      $news_query = new WP_Query('post_type=news&posts_per_page=' . $post_num);
-      if ($news_query->have_posts()):
-      ?>
-        <ul>
-          <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
-            <li> <a href="<?php the_permalink() ?>">
-                <p class="date" style="color:<?php echo esc_attr($options['index_news_date_color']); ?>;">
-                  <time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>">
-                    <?php the_time('Y.m.j'); ?>
-                  </time>
-                </p>
-                <h4 class="title"><span>
-                    <?php the_title(); ?>
-                  </span></h4>
-              </a> </li>
-          <?php endwhile;  ?>
-        </ul>
-        <!-- END .post_list -->
-        <div class="index_cb_button"> <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>"><?php echo esc_html($options['index_news_link_label']); ?></a> </div>
-      <?php endif;
-      wp_reset_query(); ?>
-    </div>
+    <?php
+    $post_num = 5;
+    $news_query = new WP_Query('post_type=news&posts_per_page=' . $post_num);
+    if ($news_query->have_posts()):
+    ?>
+      <ul>
+        <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
+          <li> <a href="<?php the_permalink() ?>">
+              <p class="date" style="color:<?php echo esc_attr($options['index_news_date_color']); ?>;">
+                <time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>">
+                  <?php the_time('Y.m.j'); ?>
+                </time>
+              </p>
+              <h4 class="title"><span>
+                  <?php the_title(); ?>
+                </span></h4>
+            </a> </li>
+        <?php endwhile;  ?>
+      </ul>
+      <!-- END .post_list -->
+      <div class="index_cb_button"> <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>"><?php echo esc_html($options['index_news_link_label']); ?></a> </div>
+    <?php endif;
+    wp_reset_query(); ?>
   </div>
+</div>
 </div>
 <?php
 // Box content --------------------------------------------------------------------

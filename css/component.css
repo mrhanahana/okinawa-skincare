@@ -27,7 +27,7 @@
   right: 30px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  content: '\f105';
+  content: "\f105";
   transition: 0.5s;
 }
 .button-invert:hover::after {
@@ -41,8 +41,8 @@
 /* 色付きのスクエアボタン
 ---------------------------*/
 .button-square {
-  padding: .8em 1.8em;
-  font-size: .9em;
+  padding: 0.8em 1.8em;
+  font-size: 0.9em;
   display: inline-block;
   position: relative;
   background-color: #c9ab53;
@@ -51,12 +51,25 @@
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   border-radius: 3px;
   transition: 0.5s;
 }
 .button-square:hover {
   filter: brightness(1.2);
+}
+
+/* ========================================
+   Heading
+======================================== */
+.heading {
+  font-family: "Noto Sans JP";
+  font-weight: 100;
+  font-size: 4rem;
+  padding-bottom: 60px;
+}
+.heading.gold {
+  color: #c9ab53;
 }
 /* ========================================
    Parallax
@@ -83,7 +96,7 @@
   width: 420px;
   padding: 60px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
 }
 .parallax-content .title {
@@ -101,6 +114,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-		max-width: 80%;
+    max-width: 80%;
   }
 }

@@ -18,13 +18,40 @@ section .content-wrap .common-inner {
 }
 /* キャンペーン
 ---------------------------*/
-section#campaign {
-  padding: 0 0 120px;
+section.campaign {
+  padding: 120px 0;
+  overflow: hidden;
+}
+/* スライダー */
+section.campaign .campaign__wrap {
+  max-width: 90%;
+  margin: 0 auto;
+}
+#index_campaign_slider_top {
+  max-width: 100%;
+}
+#index_campaign_slider_top .slick-list {
+  overflow: visible;
+  margin: 0 -10px;
+}
+#index_campaign_slider_top .slick-slide {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition:
+    opacity 0.9s,
+    transform 0.9s;
+}
+#index_campaign_slider_top .slick-slide.slick-active {
+  opacity: 1;
+  transform: scale(1);
+}
+#index_campaign_slider_top .item a.link .top_area {
+  margin-top: 0;
 }
 /* 施術メニュー共通
 ---------------------------*/
 section.search {
-  background: #f5f1ee;
+  background: #fff;
 }
 section.search .content-wrap {
   padding: 0 0 60px;
@@ -34,7 +61,7 @@ section.search .headLine {
   align-items: center;
   justify-content: center;
   padding-bottom: 1.5rem;
-  font-size: max(10px, 2.0rem);
+  font-size: max(10px, 2rem);
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.04em;
@@ -51,19 +78,8 @@ section.search .headLine::before {
   background-size: contain;
   vertical-align: middle;
 }
-section.search .trouble .headLine::before {
-  background: url("../img/img_ico_trouble.svg") no-repeat center center;
-}
-section.search .treatment .headLine::before {
-  background: url("../img/img_ico_treatment.svg") no-repeat center center;
-}
-section.search .trouble .headLine {
-  color: #bf7376;
-}
-section.search .treatment .headLine {
-  color: #7f658a;
-}
-section.search .trouble, section.search .treatment {
+section.search .trouble,
+section.search .treatment {
   width: 49%;
   margin-bottom: 50px;
   padding: 50px 20px;
@@ -73,14 +89,12 @@ section.search .trouble, section.search .treatment {
 }
 section.search .trouble {
   width: 59%;
-  background: #fdf6f6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 section.search .treatment {
   width: 39%;
-  background: #f9f7fa;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,7 +130,15 @@ section.search .trouble .troubleList a .title {
   margin: 5px 0 15px;
   padding: 0 0 15px 0;
   text-align: center;
-  background-image: linear-gradient(90deg, rgba(0 0 0 / 0) 0%, rgba(0 0 0 / 0) 42%, #bf7376 42%, #bf7376 58%, rgba(0 0 0 / 0) 58%, rgba(0 0 0 / 0) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(0 0 0 / 0) 0%,
+    rgba(0 0 0 / 0) 42%,
+    #bf7376 42%,
+    #bf7376 58%,
+    rgba(0 0 0 / 0) 58%,
+    rgba(0 0 0 / 0) 100%
+  );
   background-size: 100% 2px;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -131,9 +153,9 @@ section.search .trouble .button-invert:hover {
   background-color: #bf7376;
 }
 @media (max-width: 425px) {
-	section.search .trouble .troubleList a {
-    font-size: 1.0rem;
-}
+  section.search .trouble .troubleList a {
+    font-size: 1rem;
+  }
 }
 /* 施術から探す
 ---------------------------*/
@@ -160,14 +182,14 @@ section.search .treatmentItem li a {
   position: relative;
 }
 section.search .treatmentItem li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
   background: #000;
-  transition: all .3s;
+  transition: all 0.3s;
   transform: scale(0, 1);
   transform-origin: left top;
 }
@@ -203,7 +225,8 @@ section.search .treatment .button-invert:hover {
   section.search .info {
     display: block;
   }
-  section.search .trouble, section.search .treatment {
+  section.search .trouble,
+  section.search .treatment {
     width: auto;
   }
 }
@@ -240,7 +263,8 @@ section.home-doctor .doctor-content {
   position: relative;
   grid-area: content;
 }
-section.home-doctor .doctor-content .headline, section.home-doctor .doctor-content .catch {
+section.home-doctor .doctor-content .headline,
+section.home-doctor .doctor-content .catch {
   text-align: left;
 }
 section.home-doctor .doctor-catch {
@@ -249,7 +273,7 @@ section.home-doctor .doctor-catch {
   line-height: 1.8;
 }
 section.home-doctor .doctor-message {
-  font-size: 1.0rem;
+  font-size: 1rem;
   line-height: 2.2;
 }
 section.home-doctor .doctor-name {
@@ -280,7 +304,7 @@ section.home-doctor .sign {
   font-weight: 400;
   font-style: normal;
   color: #ccb07a;
-  opacity: .8;
+  opacity: 0.8;
 }
 section.home-doctor .index_cb_button a {
   color: #ffffff;
@@ -308,7 +332,8 @@ section.home-doctor .index_cb_button a:hover {
 .doctor-profile ul li {
   line-height: 2;
 }
-section.home-doctor .doctor-image-sp, section.home-doctor .index_cb_button.sp {
+section.home-doctor .doctor-image-sp,
+section.home-doctor .index_cb_button.sp {
   display: none;
 }
 @media (max-width: 1250px) {
@@ -348,7 +373,8 @@ section.home-doctor .doctor-image-sp, section.home-doctor .index_cb_button.sp {
     font-size: 1.2rem;
     text-align: center;
   }
-  section.home-doctor .doctor-content .headline, section.home-doctor .doctor-content .catch {
+  section.home-doctor .doctor-content .headline,
+  section.home-doctor .doctor-content .catch {
     text-align: center;
   }
   section.home-doctor .doctor-sign {
@@ -378,7 +404,7 @@ section.home-doctor .doctor-image-sp, section.home-doctor .index_cb_button.sp {
   section.home-doctor .doctor-name span {
     margin: 10px 0 0;
     display: block;
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
   section.home-doctor .index_cb_button.pc {
     display: none;

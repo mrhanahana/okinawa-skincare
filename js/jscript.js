@@ -360,13 +360,13 @@ jQuery(document).ready(function ($) {
       }
       global_menu.off("hover");
 
-      $("#global_menu .child_menu_button").remove();
-      $("#global_menu li > ul")
+      $("#drawer_menu .child_menu_button").remove();
+      $("#drawer_menu li > ul")
         .parent()
         .prepend(
           "<span class='child_menu_button'><span class='icon'></span></span>",
         );
-      $("#global_menu .child_menu_button").on("click", function () {
+      $("#drawer_menu .child_menu_button").on("click", function () {
         if ($(this).parent().hasClass("open")) {
           $(this).parent().removeClass("open");
           $(this).parent().find(">ul:not(:animated)").slideUp("fast");

@@ -213,6 +213,15 @@
 
 <?php // mobile menu -------------------------------------------- ?>
 <div id="mobile_menu">
+  <?php
+  wp_nav_menu(array(
+    'theme_location' => 'drawer_menu',
+    'container'      => 'nav',
+    'container_id'   => 'drawer_menu',
+    'menu_class'     => 'drawer_menu_list',
+    'fallback_cb'    => false,
+  ));
+  ?>
  <div id="header_mobile_banner">
   <?php
        for($i=1; $i<= 3; $i++):

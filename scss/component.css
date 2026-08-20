@@ -1,0 +1,50 @@
+/*
+Error: Invalid CSS after "...ckground-color:": expected expression (e.g. 1px, bold), was ";"
+        on line 220 of C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss
+
+215: }
+216: .popup-close:hover {
+217:   background-color: #1a8093;
+218: }
+219: .popup .popup-close:hover {
+220:   background-color:;
+221: }
+222: .popup-close:hover::before,
+223: .popup-close:hover::after {
+224:   background-color: #fff;
+225: }
+
+Backtrace:
+C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss:220
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in 'Sass::SCSS::Parser.expected'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in 'Sass::Script::Lexer#expected!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/parser.rb:855:in 'Sass::Script::Parser#assert_expr'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in 'Sass::Script::Parser#parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in 'Sass::SCSS::Parser#sass_script'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in 'Sass::SCSS::Parser#value!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in 'block in Sass::SCSS::Parser#try_declaration'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in 'Sass::SCSS::Parser#rethrow'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in 'Sass::SCSS::Parser#try_declaration'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in 'Sass::SCSS::Parser#declaration_or_ruleset'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in 'Sass::SCSS::Parser#block_child'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in 'Sass::SCSS::Parser#block_contents'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in 'Sass::SCSS::Parser#block'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in 'Sass::SCSS::Parser#ruleset'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in 'Sass::SCSS::Parser#block_child'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in 'Sass::SCSS::Parser#block_contents'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in 'Sass::SCSS::Parser#stylesheet'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in 'Sass::SCSS::Parser#parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in 'Sass::Engine#_to_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in 'Sass::Engine#render'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in 'Sass::Exec::SassScss#run'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in 'Sass::Exec::SassScss#process_result'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in 'Sass::Exec::Base#parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in 'Sass::Exec::Base#parse!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/bin/sass:13:in '<top (required)>'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:36:in 'Kernel#load'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:36:in '<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ckground-color:\": expected expression (e.g. 1px, bold), was \";\"\A         on line 220 of C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss\A \A 215: }\A 216: .popup-close:hover {\A 217:   background-color: #1a8093;\A 218: }\A 219: .popup .popup-close:hover {\A 220:   background-color:;\A 221: }\A 222: .popup-close:hover::before,\A 223: .popup-close:hover::after {\A 224:   background-color: #fff;\A 225: }"; }

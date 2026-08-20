@@ -96,90 +96,122 @@ get_header('test');
               <span class="viewMore__arrow" aria-hidden="true"></span>
             </a>
           </div>
-          <ul class="treatmentList accordion-area">
+          <ul class="treatmentList">
             <li>
-              <div class="title">機械治療</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">ノーリス</a></li>
-                  <li><a href="">Ｑスイッチレーザー</a></li>
-                  <li><a href="">ＣＯ２レーザー</a></li>
-                  <li><a href="">トーニング</a></li>
-                  <li><a href="">ダーマペン</a></li>
-                  <li><a href="">レーザーフェイシャル</a></li>
-                  <li><a href="">水光注射</a></li>
-                  <li><a href="">ハイフ</a></li>
-                  <li><a href="">ハイドラフェイシャル</a></li>
-                  <li><a href="">エレクトロポレーション</a></li>
-                  <li><a href="">イオン導入</a></li>
-                  <li><a href="">オムニラックス</a></li>
-                </ul>
+              <div class="title" data-popup="popup-a">機械治療</div>
+              <div id="popup-a" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">ノーリス</a></li>
+                    <li><a href="">Ｑスイッチレーザー</a></li>
+                    <li><a href="">ＣＯ２レーザー</a></li>
+                    <li><a href="">トーニング</a></li>
+                    <li><a href="">ダーマペン</a></li>
+                    <li><a href="">レーザーフェイシャル</a></li>
+                    <li><a href="">水光注射</a></li>
+                    <li><a href="">ハイフ</a></li>
+                    <li><a href="">ハイドラフェイシャル</a></li>
+                    <li><a href="">エレクトロポレーション</a></li>
+                    <li><a href="">イオン導入</a></li>
+                    <li><a href="">オムニラックス</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
-              <div class="title">注入治療</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
-                  <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
-                  <li><a href="">脂肪溶解注射（カベリン）</a></li>
-                  <li><a href="">肌育注射</a></li>
-                </ul>
+              <div class="title" data-popup="popup-b">注入治療</div>
+              <div id="popup-b" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
+                    <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
+                    <li><a href="">脂肪溶解注射（カベリン）</a></li>
+                    <li><a href="">肌育注射</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
-              <div class="title">美肌治療</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">ピーリング</a></li>
-                </ul>
+              <div class="title" data-popup="popup-c">美肌治療</div>
+              <div id="popup-c" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">ピーリング</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
-              <div class="title">糸リフト</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">テスリフト</a></li>
-                  <li><a href="">ＱＴＬ</a></li>
-                </ul>
+              <div class="title" data-popup="popup-d">糸リフト</div>
+              <div id="popup-d" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">テスリフト</a></li>
+                    <li><a href="">ＱＴＬ</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
-              <div class="title">脱毛</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">医療脱毛</a></li>
-                  <li><a href="">メンズ医療脱毛</a></li>
-                </ul>
+              <div class="title" data-popup="popup-e">脱毛</div>
+              <div id="popup-e" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">医療脱毛</a></li>
+                    <li><a href="">メンズ医療脱毛</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
-            <li> <a class="title no-child" href="">点滴・注射</a> </li>
+            <li> <a class="title" href="">点滴・注射</a> </li>
             <li>
-              <div class="title">ダイエット</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">GLP1ダイエット</a></li>
-                </ul>
+              <div class="title" data-popup="popup-f">ダイエット</div>
+              <div id="popup-f" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">GLP1ダイエット</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
-            <li> <a class="title no-child" href="">アートメイク</a> </li>
+            <li> <a class="title" href="">アートメイク</a> </li>
             <li>
-              <div class="title">薄毛治療</div>
-              <div class="box">
-                <ul class="treatmentItem">
-                  <li><a href="">男性の薄毛治療</a></li>
-                  <li><a href="">女性の薄毛治療</a></li>
-                </ul>
+              <div class="title" data-popup="popup-g">薄毛治療</div>
+              <div id="popup-g" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">男性の薄毛治療</a></li>
+                    <li><a href="">女性の薄毛治療</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li>
-              <div class="title">ピアス</div>
-              <div class="box">
-                <ul class="treatmentItem flexB">
-                  <li><a href="">軟骨ピアス</a></li>
-                  <li><a href="">耳たぶ</a></li>
-                  <li><a href="">ボディーピアス</a></li>
-                </ul>
+              <div class="title" data-popup="popup-h">ピアス</div>
+              <div id="popup-h" class="popup popup-hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                  <button class="popup-close" aria-label="閉じる"></button>
+                  <ul class="treatmentItem">
+                    <li><a href="">軟骨ピアス</a></li>
+                    <li><a href="">耳たぶ</a></li>
+                    <li><a href="">ボディーピアス</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>

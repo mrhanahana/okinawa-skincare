@@ -119,3 +119,107 @@
     max-width: 80%;
   }
 }
+
+/* ========================================
+   Pop Up
+======================================== */
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-hidden {
+  display: none !important;
+}
+.popup-overlay {
+  transition: 0.4s ease;
+}
+.popup-overlay.active {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+/* ポップアップの本体 */
+.popup-content {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+/* 表示時にアニメーション */
+.popup.show .popup-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.popup-title {
+  background: #1a8093;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+.popup-desc {
+  padding: 0 30px 20px;
+}
+.popup-desc p:last-child {
+  margin-bottom: 0;
+}
+/* ✕ボタン（ポップアップ外に配置） */
+.popup-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.popup-close::before,
+.popup-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: #333;
+  transform-origin: center;
+  transition: 0.3s;
+}
+.popup-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popup-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popup-close:hover {
+  background-color: #1a8093;
+}
+.popup .popup-close:hover {
+  background-color: #c9ab53;
+}
+.popup-close:hover::before,
+.popup-close:hover::after {
+  background-color: #fff;
+}

@@ -13,7 +13,6 @@ section .content-wrap {
   margin: 0 auto;
   padding: 60px 0;
 }
-
 section .content-wrap .common-inner {
   max-width: 1200px;
   margin-right: auto;
@@ -26,9 +25,8 @@ section .content-wrap .common-inner {
 section.campaign {
   padding: 120px 0;
   overflow: hidden;
+  /* スライダー */
 }
-
-/* スライダー */
 section.campaign .campaign__wrap {
   max-width: 90%;
   margin: 0 auto;
@@ -37,23 +35,19 @@ section.campaign .campaign__wrap {
 #index_campaign_slider_top {
   max-width: 100%;
 }
-
 #index_campaign_slider_top .slick-list {
   overflow: visible;
   margin: 0 -10px;
 }
-
 #index_campaign_slider_top .slick-slide {
   opacity: 0.5;
   transform: scale(0.9);
   transition: opacity 0.9s, transform 0.9s;
 }
-
 #index_campaign_slider_top .slick-slide.slick-active {
   opacity: 1;
   transform: scale(1);
 }
-
 #index_campaign_slider_top .item a.link .top_area {
   margin-top: 0;
 }
@@ -63,11 +57,9 @@ section.campaign .campaign__wrap {
 section.search {
   background: #fff;
 }
-
 section.search .content-wrap {
   padding: 0 0 60px;
 }
-
 section.search .search__heading {
   display: flex;
   align-items: end;
@@ -128,43 +120,38 @@ section.search .viewMore:hover .viewMore__arrow::before {
 section.search .viewMore:hover .viewMore__arrow::after {
   left: 70px;
 }
-
-/* お悩みから探す
----------------------------*/
+section.search {
+  /* お悩みから探す
+  ---------------------------*/
+}
 section.search .trouble,
 section.search .treatment {
   padding: 50px 20px 0;
   box-sizing: border-box;
 }
-
 section.search .trouble {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 section.search .treatment {
   width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-ul.troubleList {
+section.search ul.troubleList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 section.search .trouble .troubleList li {
   background: #fff;
 }
-
 section.search .trouble .troubleList li.transparent {
   opacity: 0;
 }
-
 section.search .trouble .troubleList a {
   display: block;
   text-align: center;
@@ -174,16 +161,10 @@ section.search .trouble .troubleList a {
   margin: 0 auto;
   transition: 0.5s;
 }
-
-section.search .trouble .troubleList li a:hover {
-  transform: translateY(-5px);
-}
-
 section.search .trouble .troubleList a img {
   width: 100%;
   max-width: 130px;
 }
-
 section.search .trouble .troubleList a .title {
   position: relative;
   width: 100%;
@@ -192,26 +173,14 @@ section.search .trouble .troubleList a .title {
   font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
   line-height: 1rem;
 }
-
-section.search .trouble .button-invert {
-  color: #bf7376;
-  background-color: transparent;
-  border: 1px solid #bf7376;
+section.search .trouble .troubleList a:hover {
+  transform: translateY(-5px);
 }
-
-section.search .trouble .button-invert:hover {
-  color: #fff;
-  background-color: #bf7376;
+section.search {
+  /* 施術から探す
+  ---------------------------*/
 }
-
-@media (max-width: 425px) {
-  section.search .trouble .troubleList a {
-    font-size: 1rem;
-  }
-}
-/* 施術から探す
----------------------------*/
-section.search .treatmentList.accordion-area > li {
+section.search .treatmentList > li {
   border: none;
   background: #fff;
   margin: 0;
@@ -219,26 +188,44 @@ section.search .treatmentList.accordion-area > li {
   transition: 0.3s;
   border-bottom: 1px dotted #ccc;
 }
-
-section.search .treatmentItem {
-  padding-left: 1.5rem;
+section.search .treatmentList li .title {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
+  padding: 3% 50px 3% 3%;
+  line-height: 1rem;
 }
-
-section.search .treatmentItem li {
+section.search .treatmentList li .title::before {
   border: none;
-  list-style: disc;
-  line-height: 1.5rem;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 13px;
+  height: 1px;
+  background-color: #000;
+  transform: translateY(-50%);
 }
-
-section.search .treatmentItem li::marker {
-  color: #7f658a;
+section.search .treatmentList li .title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  width: 1px;
+  height: 13px;
+  background-color: #000;
+  transform: translateY(-50%) scaleY(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
-
-section.search .treatmentItem li a {
+section.search .treatmentList li .title.close::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+section.search .treatmentList li .treatmentItem a {
   position: relative;
 }
-
-section.search .treatmentItem li a::after {
+section.search .treatmentList li .treatmentItem a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -250,65 +237,9 @@ section.search .treatmentItem li a::after {
   transform: scale(0, 1);
   transform-origin: left top;
 }
-
-section.search .treatmentItem li a:hover::after {
+section.search .treatmentList li .treatmentItem a:hover::after {
   transform: scale(1, 1);
 }
-
-section.search .treatmentList.accordion-area .title {
-  position: relative;
-  display: block;
-  font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
-}
-section.search .treatmentList.accordion-area .title::before {
-  border: none;
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 16px;
-  height: 1px;
-  background-color: #000;
-  transform: translateY(-50%);
-}
-section.search .treatmentList.accordion-area .title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 27px;
-  width: 1px;
-  height: 16px;
-  background-color: #000;
-  transform: translateY(-50%) scaleY(1);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-section.search .treatmentList.accordion-area .title.close::after {
-  transform: translateY(-50%) rotate(90deg);
-}
-
-section.search .treatmentList.accordion-area a.title.no-child::before, section.search .treatmentList.accordion-area a.title.no-child::after {
-  transition: none;
-}
-section.search .treatmentList.accordion-area a.title.no-child:hover {
-  color: inherit;
-  background-color: inherit;
-}
-section.search .treatmentList.accordion-area a.title.no-child:hover::before, section.search .treatmentList.accordion-area a.title.no-child:hover::after {
-  transform: translateY(-50%);
-}
-
-section.search .treatment .button-invert {
-  color: #7f658a;
-  background-color: transparent;
-  border: 1px solid #7f658a;
-}
-
-section.search .treatment .button-invert:hover {
-  color: #fff;
-  background-color: #7f658a;
-}
-
 @media (max-width: 1023px) {
   section.search .info {
     display: block;
@@ -335,6 +266,11 @@ section.search .treatment .button-invert:hover {
     max-width: 100px;
   }
 }
+section.search .popup-content {
+  box-sizing: border-box;
+  padding: 50px;
+}
+
 /* Concept
 ---------------------------*/
 /* Doctor

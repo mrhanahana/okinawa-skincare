@@ -1,0 +1,21 @@
+// Scss Document
+@use "sass:math";
+
+$root-size: 10;
+
+// px → rem
+@function rem($px) {
+  @return math.div($px, $root-size) * 1rem;
+}
+
+// Fluid Typography
+@function fluid($min-px, $max-px, $min-vw: 390, $max-vw: 1440) {
+  $slope: math.div(($max-px - $min-px), ($max-vw - $min-vw));
+  $intercept: $min-px - ($slope * $min-vw);
+
+  @return clamp(
+    #{rem($min-px)},
+    calc(#{rem($intercept)} + #{$slope * 100}vw),
+    #{rem($max-px)}
+  );
+}

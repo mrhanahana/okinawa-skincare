@@ -38,18 +38,24 @@ get_header('test');
         <?php $i++;
         endwhile; ?>
       </div>
-<?php endif;
+    <?php endif;
     wp_reset_query(); ?>
-</div>
+  </div>
 </section>
--->
+      -->
 <section class="search">
   <div class="content-wrap">
-    <div class="info flexB">
+    <div class="info flexC">
       <div class="trouble">
         <div>
-          <h3 class="headLine">お悩みから探す</h3>
-          <ul class="troubleList flexE mb50">
+          <div class="search__heading">
+            <h3 class="headLine">お悩みから探す</h3>
+            <a href="#" class="viewMore">
+              <span>VIEW MORE</span>
+              <span class="viewMore__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+          <ul class="troubleList">
             <li> <a href="">
                 <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-01.svg" /></div>
                 <div class="title">にきび・にきび跡</div>
@@ -78,16 +84,19 @@ get_header('test');
                 <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-07.svg" /></div>
                 <div class="title">しわ・たるみ</div>
               </a> </li>
-            <li class="transparent"> </li>
-            <li class="transparent"> </li>
           </ul>
         </div>
-        <a class="button-invert w90">すべてのお悩みを見る</a>
       </div>
       <div class="treatment">
         <div>
-          <h3 class="headLine">施術から探す</h3>
-          <ul class="treatmentList accordion-area mb50">
+          <div class="search__heading">
+            <h3 class="headLine">施術から探す</h3>
+            <a href="#" class="viewMore">
+              <span>VIEW MORE</span>
+              <span class="viewMore__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+          <ul class="treatmentList accordion-area">
             <li>
               <div class="title">機械治療</div>
               <div class="box">
@@ -175,7 +184,6 @@ get_header('test');
             </li>
           </ul>
         </div>
-        <a class="button-invert w90">すべての施術を見る</a>
       </div>
     </div>
   </div>

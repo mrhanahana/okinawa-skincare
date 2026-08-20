@@ -1,7 +1,6 @@
-@charset "UTF-8";
-/* ========================================
-   変数
-======================================== */
+@charset "utf-8";
+@use "global" as *;
+
 /* ========================================
    front-page
 ======================================== */
@@ -13,122 +12,128 @@ section .content-wrap {
   margin: 0 auto;
   padding: 60px 0;
 }
-
 section .content-wrap .common-inner {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding: 80px;
 }
-
 /* キャンペーン
 ---------------------------*/
 section.campaign {
   padding: 120px 0;
   overflow: hidden;
 }
-
 /* スライダー */
 section.campaign .campaign__wrap {
   max-width: 90%;
   margin: 0 auto;
 }
-
 #index_campaign_slider_top {
   max-width: 100%;
 }
-
 #index_campaign_slider_top .slick-list {
   overflow: visible;
   margin: 0 -10px;
 }
-
 #index_campaign_slider_top .slick-slide {
   opacity: 0.5;
   transform: scale(0.9);
-  transition: opacity 0.9s, transform 0.9s;
+  transition:
+    opacity 0.9s,
+    transform 0.9s;
 }
-
 #index_campaign_slider_top .slick-slide.slick-active {
   opacity: 1;
   transform: scale(1);
 }
-
 #index_campaign_slider_top .item a.link .top_area {
   margin-top: 0;
 }
-
 /* 施術メニュー共通
 ---------------------------*/
 section.search {
   background: #fff;
 }
-
 section.search .content-wrap {
   padding: 0 0 60px;
 }
 
-section.search .search__heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #000;
-}
-section.search .headLine {
-  margin: 0;
-  font-size: clamp(1rem, 0.7771428571rem + 0.5714285714vw, 1.6rem);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  font-family: YakuHanMP, "Noto Serif JP", serif;
-}
-section.search .viewMore {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #000;
-  font-size: clamp(0.6rem, 0.5257142857rem + 0.1904761905vw, 0.8rem);
-  letter-spacing: 0.08em;
-  text-decoration: none;
-}
-section.search .viewMore__arrow {
-  position: relative;
-  display: block;
-  width: 80px;
-  height: 10px;
-  flex-shrink: 0;
-}
-section.search .viewMore__arrow::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 65px;
-  height: 1px;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
-section.search .viewMore__arrow::after {
-  content: "";
-  position: absolute;
-  left: 57px;
-  bottom: 0;
-  width: 9px;
-  height: 1px;
-  background-color: currentColor;
-  transform: rotate(35deg);
-  transform-origin: right bottom;
-  transition: left 0.3s ease;
-}
-section.search .viewMore:hover .viewMore__arrow::before {
-  width: 80px;
-}
-section.search .viewMore:hover .viewMore__arrow::after {
-  left: 70px;
-}
+section.search {
+  .search__heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+  }
 
+  .headLine {
+    margin: 0;
+    font-size: fluid(10, 16);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    font-family: YakuHanMP, "Noto Serif JP", serif;
+  }
+
+  .viewMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #000;
+    font-size: fluid(6, 8);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+
+    &__arrow {
+      position: relative;
+      display: block;
+      width: 80px; // ホバー後のスペースを先に確保
+      height: 10px;
+      flex-shrink: 0;
+
+      // 横線
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 65px;
+        height: 1px;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
+
+      // 斜めに上がる矢印の先端
+      &::after {
+        content: "";
+        position: absolute;
+        left: 57px;
+        bottom: 0;
+        width: 9px;
+        height: 1px;
+        background-color: currentColor;
+        transform: rotate(35deg);
+        transform-origin: right bottom;
+        transition: left 0.3s ease;
+      }
+    }
+
+    &:hover {
+      .viewMore__arrow {
+        &::before {
+          width: 80px;
+        }
+
+        &::after {
+          left: 70px;
+        }
+      }
+    }
+  }
+}
 /* お悩みから探す
 ---------------------------*/
 section.search .trouble,
@@ -136,14 +141,12 @@ section.search .treatment {
   padding: 50px 20px 0;
   box-sizing: border-box;
 }
-
 section.search .trouble {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 section.search .treatment {
   width: 35%;
   display: flex;
@@ -156,15 +159,12 @@ ul.troubleList {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 section.search .trouble .troubleList li {
   background: #fff;
 }
-
 section.search .trouble .troubleList li.transparent {
   opacity: 0;
 }
-
 section.search .trouble .troubleList a {
   display: block;
   text-align: center;
@@ -174,36 +174,30 @@ section.search .trouble .troubleList a {
   margin: 0 auto;
   transition: 0.5s;
 }
-
 section.search .trouble .troubleList li a:hover {
   transform: translateY(-5px);
 }
-
 section.search .trouble .troubleList a img {
   width: 100%;
   max-width: 130px;
 }
-
 section.search .trouble .troubleList a .title {
   position: relative;
   width: 100%;
   margin: 10px 0;
   text-align: center;
-  font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
+  font-size: fluid(8, 10);
   line-height: 1rem;
 }
-
 section.search .trouble .button-invert {
   color: #bf7376;
   background-color: transparent;
   border: 1px solid #bf7376;
 }
-
 section.search .trouble .button-invert:hover {
   color: #fff;
   background-color: #bf7376;
 }
-
 @media (max-width: 425px) {
   section.search .trouble .troubleList a {
     font-size: 1rem;
@@ -219,25 +213,20 @@ section.search .treatmentList.accordion-area > li {
   overflow: hidden;
   transition: 0.3s;
 }
-
 section.search .treatmentItem {
   padding-left: 1.5rem;
 }
-
 section.search .treatmentItem li {
   border: none;
   width: 50%;
   list-style: disc;
 }
-
 section.search .treatmentItem li::marker {
   color: #7f658a;
 }
-
 section.search .treatmentItem li a {
   position: relative;
 }
-
 section.search .treatmentItem li a::after {
   content: "";
   position: absolute;
@@ -250,41 +239,33 @@ section.search .treatmentItem li a::after {
   transform: scale(0, 1);
   transform-origin: left top;
 }
-
 section.search .treatmentItem li a:hover::after {
   transform: scale(1, 1);
 }
-
 section.search .treatmentList.accordion-area .title {
   display: block;
-  font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
+  font-size: fluid(8, 10);
 }
-
 section.search .treatmentList.accordion-area a.title.no-child::before {
   transform: rotate(45deg) translateX(0);
   transition: transform 0.3s;
 }
-
 section.search .treatmentList.accordion-area a.title.no-child:hover {
   transform: translateX(5px);
 }
-
 section.search .treatmentList.accordion-area a.title.no-child:hover::before {
   transform: translateX(5px) rotate(45deg);
 }
-
 section.search .treatment .button-invert {
   color: #7f658a;
   background-color: transparent;
   border: 1px solid #7f658a;
 }
-
 section.search .treatment .button-invert:hover {
   color: #fff;
   background-color: #7f658a;
 }
-
-@media (max-width: 1023px) {
+@include mq(tb) {
   section.search .info {
     display: block;
   }
@@ -295,23 +276,25 @@ section.search .treatment .button-invert:hover {
     padding-inline: 0;
   }
 }
-@media (max-width: 767px) {
+@include mq(sp) {
   section.search .trouble,
   section.search .treatment {
     width: 96%;
+
+    ul.troubleList {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+
+      a {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
   }
-  section.search .trouble ul.troubleList,
-  section.search .treatment ul.troubleList {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  section.search .trouble ul.troubleList a img,
-  section.search .treatment ul.troubleList a img {
-    max-width: 100px;
-  }
-}
-/* Concept
+} /* Concept
 ---------------------------*/
+
 /* Doctor
 ---------------------------*/
 section.home-doctor {
@@ -319,7 +302,6 @@ section.home-doctor {
   background: url("../img/img_home_doctor_bg.svg") center no-repeat;
   background-size: cover;
 }
-
 section.home-doctor .content-wrap {
   display: grid;
   column-gap: 50px;
@@ -329,62 +311,51 @@ section.home-doctor .content-wrap {
   padding: 120px 0 0 0;
   margin-right: 100px;
 }
-
 section.home-doctor .doctor-image {
   grid-area: image;
   position: relative;
 }
-
 section.home-doctor .doctor-image img {
   position: absolute;
   right: -100px;
   bottom: 0;
   max-width: 600px;
 }
-
 section.home-doctor .doctor-content {
   position: relative;
   grid-area: content;
 }
-
 section.home-doctor .doctor-content .headline,
 section.home-doctor .doctor-content .catch {
   text-align: left;
 }
-
 section.home-doctor .doctor-catch {
   margin: 40px 0;
   font-size: 1.8rem;
   line-height: 1.8;
 }
-
 section.home-doctor .doctor-message {
   font-size: 1rem;
   line-height: 2.2;
 }
-
 section.home-doctor .doctor-name {
   margin: 10px 0 150px;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
-
 section.home-doctor .doctor-sign {
   position: relative;
 }
-
 section.home-doctor .doctor-name span {
   font-size: 1.2rem;
   margin-left: 30px;
   color: #555555;
 }
-
 section.home-doctor .position {
   margin: 50px 0 0;
   font-size: 1.2rem;
 }
-
 section.home-doctor .sign {
   position: absolute;
   bottom: -60px;
@@ -397,48 +368,42 @@ section.home-doctor .sign {
   color: #ccb07a;
   opacity: 0.8;
 }
-
 section.home-doctor .index_cb_button a {
   color: #ffffff;
   background: #c9ab53;
 }
-
 section.home-doctor .index_cb_button a:hover {
   background: #66572a;
 }
-
 .doctor-profile {
   grid-area: profile;
   margin: 0 0 60px;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(255, 255, 255, 0.3);
   border: 1px solid #e7dbc1;
   border-radius: 10px;
   height: fit-content;
 }
-
 .doctor-profile .title {
   margin-bottom: 15px;
   font-size: 1.2rem;
 }
-
 .doctor-profile .item:not(:last-child) {
   margin-bottom: 35px;
 }
-
 .doctor-profile ul li {
   line-height: 2;
 }
-
 section.home-doctor .doctor-image-sp,
 section.home-doctor .index_cb_button.sp {
   display: none;
 }
-
 @media (max-width: 1250px) {
   section.home-doctor .content-wrap {
     grid-template-columns: 40% 1fr;
-    grid-template-areas: "image content" "profile profile";
+    grid-template-areas:
+      "image content"
+      "profile profile";
     margin: 0;
   }
   section.home-doctor .sign {
@@ -457,7 +422,10 @@ section.home-doctor .index_cb_button.sp {
 @media (max-width: 767px) {
   section.home-doctor .content-wrap {
     grid-template-columns: 1fr;
-    grid-template-areas: "content" "image" "profile";
+    grid-template-areas:
+      "content"
+      "image"
+      "profile";
     margin: 0 auto;
   }
   section.home-doctor .doctor-image img.pc {
@@ -523,6 +491,7 @@ section.home-doctor .index_cb_button.sp {
 }
 /* お知らせ
 ---------------------------*/
+
 /* アクセス
 ---------------------------*/
 section#access {
@@ -530,11 +499,9 @@ section#access {
   padding: 120px 0;
   font-size: 16px;
 }
-
 section#access .map-area {
   width: 50%;
 }
-
 section#access .map-area .map {
   position: relative;
   padding-bottom: 400px;
@@ -542,7 +509,6 @@ section#access .map-area .map {
   overflow: hidden;
   filter: grayscale(100%);
 }
-
 section#access .map-area .map iframe {
   position: absolute;
   top: 0;
@@ -550,28 +516,23 @@ section#access .map-area .map iframe {
   width: 100%;
   height: 100%;
 }
-
 section#access .text-area {
   width: calc(50% - 5rem);
   padding-right: 1rem;
   box-sizing: border-box;
 }
-
 section#access .index_title > * {
   text-align: left;
 }
-
 section#access dl {
   display: grid;
   grid-template-columns: 4rem 1fr;
   gap: 1rem 2rem;
   line-height: 1.8rem;
 }
-
 section#access dl dd strong {
   color: #66572a;
 }
-
 @media (max-width: 999px) {
   section#access {
     padding: 60px 0;

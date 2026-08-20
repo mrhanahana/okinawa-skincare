@@ -1,14 +1,12 @@
-@charset "UTF-8";
-/* ========================================
-   変数
-======================================== */
+@charset "utf-8";
+@use "global" as *;
+
 /* ========================================
    common
 ======================================== */
 #container {
   background: #f5f5f5;
 }
-
 /* ========================================
    Haeder
 ======================================== */
@@ -26,7 +24,6 @@
   text-decoration: none;
   text-align: center;
 }
-
 #menu_button:before {
   font-family: "design_plus";
   content: "\f0c9";
@@ -43,7 +40,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 #menu_button span {
   text-indent: 100%;
   white-space: nowrap;
@@ -66,7 +62,6 @@
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
-
 .open_menu #container:before {
   content: "";
   display: block;
@@ -78,7 +73,6 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
 }
-
 .open_menu #mobile_menu {
   right: 0;
   box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 0.4);
@@ -88,11 +82,9 @@
   width: 100%;
   margin: 0;
 }
-
 #mobile_menu #drawer_menu li {
   position: relative;
 }
-
 #mobile_menu #drawer_menu a {
   display: block;
   padding: 18px 20px;
@@ -105,15 +97,12 @@
   box-sizing: border-box;
   border-bottom: 1px solid #504315;
 }
-
 #drawer_menu li ul {
   display: none;
 }
-
 #mobile_menu #drawer_menu ul ul a {
   padding-left: 32px;
 }
-
 #mobile_menu #drawer_menu .child_menu_button {
   display: block;
   position: absolute;
@@ -125,7 +114,6 @@
   z-index: 9;
   cursor: pointer;
 }
-
 #mobile_menu #drawer_menu .child_menu_button .icon:before {
   font-family: "design_plus";
   content: "\e90e";
@@ -140,16 +128,13 @@
   right: 22px;
   top: 25px;
 }
-
 #mobile_menu #drawer_menu a:hover,
 #mobile_menu #drawer_menu .child_menu_button:hover {
   background: #c9ab53;
 }
-
 #mobile_menu #drawer_menu li.open > .child_menu_button .icon:before {
   content: "\e911";
 }
-
 /* ========================================
    footer
 ======================================== */

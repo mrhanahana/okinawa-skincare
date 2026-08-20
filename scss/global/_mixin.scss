@@ -1,0 +1,12 @@
+// Scss Document
+$breakpoints: (
+  sp: 767px,
+  tb: 1023px,
+  pc: 1439px,
+);
+
+@mixin mq($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

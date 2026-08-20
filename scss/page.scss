@@ -208,18 +208,18 @@ section.search .trouble .button-invert:hover {
 section.search .treatmentList.accordion-area > li {
   border: none;
   background: #fff;
-  border-radius: 10px;
-  margin: 5px;
+  margin: 0;
   overflow: hidden;
   transition: 0.3s;
+  border-bottom: 1px dotted #ccc;
 }
 section.search .treatmentItem {
   padding-left: 1.5rem;
 }
 section.search .treatmentItem li {
   border: none;
-  width: 50%;
   list-style: disc;
+  line-height: 1.5rem;
 }
 section.search .treatmentItem li::marker {
   color: #7f658a;
@@ -243,19 +243,58 @@ section.search .treatmentItem li a:hover::after {
   transform: scale(1, 1);
 }
 section.search .treatmentList.accordion-area .title {
+  position: relative;
   display: block;
   font-size: fluid(8, 10);
+  // 横棒
+  &::before {
+    border: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 16px;
+    height: 1px;
+    background-color: #000;
+    transform: translateY(-50%);
+  }
+
+  // 縦棒
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    width: 1px;
+    height: 16px;
+    background-color: #000;
+    transform: translateY(-50%) scaleY(1);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  // closeクラスが付いたら縦棒を折りたたむ
+  &.close::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
 }
-section.search .treatmentList.accordion-area a.title.no-child::before {
-  transform: rotate(45deg) translateX(0);
-  transition: transform 0.3s;
+section.search .treatmentList.accordion-area a.title.no-child {
+  &::before,
+  &::after {
+    transition: none;
+  }
+
+  &:hover {
+    color: inherit;
+    background-color: inherit;
+
+    &::before,
+    &::after {
+      transform: translateY(-50%);
+    }
+  }
 }
-section.search .treatmentList.accordion-area a.title.no-child:hover {
-  transform: translateX(5px);
-}
-section.search .treatmentList.accordion-area a.title.no-child:hover::before {
-  transform: translateX(5px) rotate(45deg);
-}
+
 section.search .treatment .button-invert {
   color: #7f658a;
   background-color: transparent;

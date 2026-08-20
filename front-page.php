@@ -100,7 +100,7 @@ get_header('test');
             <li>
               <div class="title">機械治療</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">ノーリス</a></li>
                   <li><a href="">Ｑスイッチレーザー</a></li>
                   <li><a href="">ＣＯ２レーザー</a></li>
@@ -119,7 +119,7 @@ get_header('test');
             <li>
               <div class="title">注入治療</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
                   <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
                   <li><a href="">脂肪溶解注射（カベリン）</a></li>
@@ -130,7 +130,7 @@ get_header('test');
             <li>
               <div class="title">美肌治療</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">ピーリング</a></li>
                 </ul>
               </div>
@@ -138,7 +138,7 @@ get_header('test');
             <li>
               <div class="title">糸リフト</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">テスリフト</a></li>
                   <li><a href="">ＱＴＬ</a></li>
                 </ul>
@@ -147,7 +147,7 @@ get_header('test');
             <li>
               <div class="title">脱毛</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">医療脱毛</a></li>
                   <li><a href="">メンズ医療脱毛</a></li>
                 </ul>
@@ -157,7 +157,7 @@ get_header('test');
             <li>
               <div class="title">ダイエット</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">GLP1ダイエット</a></li>
                 </ul>
               </div>
@@ -166,7 +166,7 @@ get_header('test');
             <li>
               <div class="title">薄毛治療</div>
               <div class="box">
-                <ul class="treatmentItem flexB">
+                <ul class="treatmentItem">
                   <li><a href="">男性の薄毛治療</a></li>
                   <li><a href="">女性の薄毛治療</a></li>
                 </ul>

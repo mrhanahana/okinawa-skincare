@@ -1,50 +1,253 @@
-/*
-Error: Invalid CSS after "...ckground-color:": expected expression (e.g. 1px, bold), was ";"
-        on line 220 of C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss
+@charset "UTF-8";
+@use "global" as *;
+/* ========================================
+   Button
+======================================== */
+/* 色が反転するボタン
+---------------------------*/
+.button-invert {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  white-space: nowrap;
+  margin: auto auto 0;
+  padding: 1.2rem 4rem;
+  border-radius: 50px;
+  background-color: #fff;
+  transition: 0.5s; }
 
-215: }
-216: .popup-close:hover {
-217:   background-color: #1a8093;
-218: }
-219: .popup .popup-close:hover {
-220:   background-color:;
-221: }
-222: .popup-close:hover::before,
-223: .popup-close:hover::after {
-224:   background-color: #fff;
-225: }
+.button-invert:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #c9ab53; }
 
-Backtrace:
-C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss:220
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in 'Sass::SCSS::Parser.expected'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in 'Sass::Script::Lexer#expected!'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/parser.rb:855:in 'Sass::Script::Parser#assert_expr'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in 'Sass::Script::Parser#parse'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in 'Sass::SCSS::Parser#sass_script'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in 'Sass::SCSS::Parser#value!'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in 'block in Sass::SCSS::Parser#try_declaration'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in 'Sass::SCSS::Parser#rethrow'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in 'Sass::SCSS::Parser#try_declaration'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in 'Sass::SCSS::Parser#declaration_or_ruleset'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in 'Sass::SCSS::Parser#block_child'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in 'Sass::SCSS::Parser#block_contents'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in 'Sass::SCSS::Parser#block'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in 'Sass::SCSS::Parser#ruleset'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in 'Sass::SCSS::Parser#block_child'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in 'Sass::SCSS::Parser#block_contents'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in 'Sass::SCSS::Parser#stylesheet'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in 'Sass::SCSS::Parser#parse'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in 'Sass::Engine#_to_tree'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in 'Sass::Engine#render'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in 'Sass::Exec::SassScss#run'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in 'Sass::Exec::SassScss#process_result'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in 'Sass::Exec::Base#parse'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in 'Sass::Exec::Base#parse!'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.4.0/gems/sass-3.7.4/bin/sass:13:in '<top (required)>'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:36:in 'Kernel#load'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:36:in '<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ckground-color:\": expected expression (e.g. 1px, bold), was \";\"\A         on line 220 of C:\Users\youbo\Documents\EverySync\HanaHana\Web制作\あ行\沖縄スキンケアクリニック\02 ソース\wp-content\themes\noel_tcd072_child\scss\component.scss\A \A 215: }\A 216: .popup-close:hover {\A 217:   background-color: #1a8093;\A 218: }\A 219: .popup .popup-close:hover {\A 220:   background-color:;\A 221: }\A 222: .popup-close:hover::before,\A 223: .popup-close:hover::after {\A 224:   background-color: #fff;\A 225: }"; }
+.button-invert::after {
+  position: absolute;
+  right: 30px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f105";
+  transition: 0.5s; }
+
+.button-invert:hover::after {
+  transform: translateX(5px); }
+
+.button-invert.w90 {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+/* 色付きのスクエアボタン
+---------------------------*/
+.button-square {
+  padding: 0.8em 1.8em;
+  font-size: 0.9em;
+  display: inline-block;
+  position: relative;
+  background-color: #c9ab53;
+  border-style: solid;
+  border-width: 0px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  transition: 0.5s; }
+
+.button-square:hover {
+  filter: brightness(1.2); }
+
+/* ========================================
+   Heading
+======================================== */
+.heading {
+  font-family: "Noto Sans JP";
+  font-weight: 100;
+  font-size: 4rem;
+  padding-bottom: 60px; }
+
+.heading.gold {
+  color: #c9ab53; }
+
+.heading-en {
+  position: relative;
+  margin: 30px 0;
+  padding: 0 0 10px 0;
+  background-image: linear-gradient(90deg, var(--color-theme) 0%, var(--color-theme) 6%, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0) 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  font-weight: normal;
+  line-height: 2;
+  font-size: 26px;
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif; }
+  .heading-en::before {
+    content: attr(data-en);
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    font-size: 1rem;
+    color: var(--color-theme);
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif; }
+  .heading-en.center {
+    text-align: center;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 47%, var(--color-theme) 47%, var(--color-theme) 53%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 0) 100%); }
+
+/* ========================================
+   Parallax
+======================================== */
+.parallax {
+  position: relative; }
+
+.parallax-image {
+  height: 400px;
+  overflow: hidden; }
+
+.parallax-image img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  transform: translateY(0);
+  will-change: transform; }
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  width: 420px;
+  padding: 60px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px); }
+
+.parallax-content .title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.parallax-content .desc {
+  line-height: 2.2; }
+
+@media (max-width: 1023px) {
+  .parallax-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    max-width: 80%; } }
+/* ========================================
+   Pop Up
+======================================== */
+html.popup-open {
+  overflow: hidden; }
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: safe center;
+  justify-content: center;
+  padding: 32px 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; }
+
+.popup-hidden {
+  display: none !important; }
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease; }
+
+.popup-overlay.active {
+  opacity: 1; }
+
+/* ポップアップの本体 */
+.popup-content {
+  position: relative;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease; }
+
+/* 表示時にアニメーション */
+.popup.show .popup-content {
+  opacity: 1;
+  transform: translateY(0); }
+
+.popup-title {
+  background: #1a8093;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative; }
+
+.popup-desc {
+  padding: 0 30px 20px; }
+
+.popup-desc p:last-child {
+  margin-bottom: 0; }
+
+/* ✕ボタン（ポップアップ外に配置） */
+.popup-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s; }
+
+.popup-close::before,
+.popup-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: #333;
+  transform-origin: center;
+  transition: 0.3s; }
+
+.popup-close::before {
+  transform: translate(-50%, -50%) rotate(45deg); }
+
+.popup-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg); }
+
+.popup-close:hover {
+  background-color: #1a8093; }
+
+.popup .popup-close:hover {
+  background-color: #c9ab53; }
+
+.popup-close:hover::before,
+.popup-close:hover::after {
+  background-color: #fff; }

@@ -1,8 +1,10 @@
 <?php
+
 /************************************************************************************** 
 /* cssをインポート */
 /**************************************************************************************/
-function child_enqueue_assets() {
+function child_enqueue_assets()
+{
   /* FontAwesome */
   wp_enqueue_style(
     'fontawesome',
@@ -10,7 +12,7 @@ function child_enqueue_assets() {
     array(),
     '6.5.2'
   );
-	
+
   wp_enqueue_style(
     'parent-style',
     get_template_directory_uri() . '/style.css'
@@ -19,35 +21,44 @@ function child_enqueue_assets() {
   wp_enqueue_style(
     'child-style',
     get_stylesheet_directory_uri() . '/style.css',
-    array( 'parent-style' )
+    array('parent-style')
+  );
+
+  wp_enqueue_style(
+    'base',
+    get_stylesheet_directory_uri() . '/css/base.css',
+    array('child-style'),
+    filemtime(
+      get_stylesheet_directory_uri() . '/css/base.css'
+    )
   );
 
   wp_enqueue_style(
     'component',
     get_stylesheet_directory_uri() . '/css/component.css',
-    array( 'child-style' ),
-    filemtime( get_stylesheet_directory() . '/css/component.css' )
+    array('base'),
+    filemtime(get_stylesheet_directory() . '/css/component.css')
   );
 
   wp_enqueue_style(
     'utility',
     get_stylesheet_directory_uri() . '/css/utility.css',
-    array( 'component' ),
-    filemtime( get_stylesheet_directory() . '/css/utility.css' )
+    array('component'),
+    filemtime(get_stylesheet_directory() . '/css/utility.css')
   );
 
   wp_enqueue_style(
     'child-custom',
     get_stylesheet_directory_uri() . '/css/custom.css',
-    array( 'utility' ),
-    filemtime( get_stylesheet_directory() . '/css/custom.css' )
+    array('utility'),
+    filemtime(get_stylesheet_directory() . '/css/custom.css')
   );
 
   wp_enqueue_style(
     'child-page',
     get_stylesheet_directory_uri() . '/css/page.css',
-    array( 'child-custom' ),
-    filemtime( get_stylesheet_directory() . '/css/page.css' )
+    array('child-custom'),
+    filemtime(get_stylesheet_directory() . '/css/page.css')
   );
 }
-add_action( 'wp_enqueue_scripts', 'child_enqueue_assets', 20 );
+add_action('wp_enqueue_scripts', 'child_enqueue_assets', 20);

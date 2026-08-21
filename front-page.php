@@ -103,6 +103,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Mechanical Treatment">機械治療</h4>
                   <ul class="treatmentItem">
                     <li><a href="">ノーリス</a></li>
                     <li><a href="">Ｑスイッチレーザー</a></li>
@@ -126,6 +127,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Injection Treatment">注入治療</h4>
                   <ul class="treatmentItem">
                     <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
                     <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
@@ -141,6 +143,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Skin Treatment">美肌治療</h4>
                   <ul class="treatmentItem">
                     <li><a href="">ピーリング</a></li>
                   </ul>
@@ -153,6 +156,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Thread Lift">糸リフト</h4>
                   <ul class="treatmentItem">
                     <li><a href="">テスリフト</a></li>
                     <li><a href="">ＱＴＬ</a></li>
@@ -166,6 +170,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Hair Removal">脱毛</h4>
                   <ul class="treatmentItem">
                     <li><a href="">医療脱毛</a></li>
                     <li><a href="">メンズ医療脱毛</a></li>
@@ -180,6 +185,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Diet">ダイエット</h4>
                   <ul class="treatmentItem">
                     <li><a href="">GLP1ダイエット</a></li>
                   </ul>
@@ -193,6 +199,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Hair Loss Treatment">薄毛治療</h4>
                   <ul class="treatmentItem">
                     <li><a href="">男性の薄毛治療</a></li>
                     <li><a href="">女性の薄毛治療</a></li>
@@ -206,6 +213,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
+                  <h4 class="heading-en center" data-en="Earrings">ピアス</h4>
                   <ul class="treatmentItem">
                     <li><a href="">軟骨ピアス</a></li>
                     <li><a href="">耳たぶ</a></li>

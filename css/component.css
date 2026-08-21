@@ -82,6 +82,34 @@
   color: #c9ab53;
 }
 
+.heading-en {
+  position: relative;
+  margin: 30px 0;
+  padding: 0 0 10px 0;
+  background-image: linear-gradient(90deg, var(--color-theme) 0%, var(--color-theme) 6%, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0) 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  font-weight: normal;
+  line-height: 2;
+  font-size: 26px;
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+.heading-en::before {
+  content: attr(data-en);
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: normal;
+  font-size: 1rem;
+  color: var(--color-theme);
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+}
+.heading-en.center {
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 47%, var(--color-theme) 47%, var(--color-theme) 53%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 0) 100%);
+}
+
 /* ========================================
    Parallax
 ======================================== */
@@ -137,13 +165,22 @@
 /* ========================================
    Pop Up
 ======================================== */
+html.popup-open {
+  overflow: hidden;
+}
+
 .popup {
   position: fixed;
   inset: 0;
   z-index: 9999;
   display: flex;
-  align-items: center;
+  align-items: safe center;
   justify-content: center;
+  padding: 32px 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .popup-hidden {
@@ -151,20 +188,23 @@
 }
 
 .popup-overlay {
-  transition: 0.4s ease;
-}
-
-.popup-overlay.active {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
 }
 
 /* ポップアップの本体 */
 .popup-content {
   position: relative;
+  flex-shrink: 0;
   background: white;
   border-radius: 10px;
   max-width: 500px;

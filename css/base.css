@@ -9,4 +9,9 @@
   --color-theme: #c9ab53;
   --color-white: #fff;
   --color-black: #333;
+  --color-text: #333;
+}
+
+body {
+  color: var(--color-text);
 }

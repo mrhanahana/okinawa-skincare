@@ -45,6 +45,7 @@ get_header('test');
       -->
 <section class="search">
   <div class="content-wrap">
+    <h2 class="heading">Menu</h2>
     <div class="info flexC">
       <div class="trouble">
         <div>

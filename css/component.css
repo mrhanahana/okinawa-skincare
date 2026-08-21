@@ -72,10 +72,12 @@
    Heading
 ======================================== */
 .heading {
-  font-family: "Noto Sans JP";
-  font-weight: 100;
+  font-family: "roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   font-size: 4rem;
   padding-bottom: 60px;
+  letter-spacing: 0.03em;
 }
 
 .heading.gold {

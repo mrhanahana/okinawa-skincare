@@ -40,6 +40,7 @@
       gtag('config', 'UA-240830134-1');
       gtag('config', 'AW-754298546');
     </script>
+    <link rel="stylesheet" href="https://use.typekit.net/hsl6lmw.css">
     <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
     <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
     <script>

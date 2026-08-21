@@ -58,7 +58,24 @@ section.search {
   background: #fff;
 }
 section.search .content-wrap {
-  padding: 0 0 60px;
+  position: relative;
+}
+section.search .content-wrap h2.heading {
+  position: absolute;
+  transform-origin: left top;
+  transform: rotate(90deg);
+  top: 100px;
+  right: -160px;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  section.search .content-wrap h2.heading {
+    transform: inherit;
+    position: relative;
+    top: inherit;
+    right: inherit;
+    text-align: center;
+  }
 }
 section.search .search__heading {
   display: flex;

@@ -66,8 +66,26 @@ section.search {
   background: #fff;
 
   .content-wrap {
-    padding: 0 0 60px;
+    position: relative;
+
+    h2.heading {
+      position: absolute;
+      transform-origin: left top;
+      transform: rotate(90deg);
+      top: 100px;
+      right: -160px;
+      padding: 0;
+
+      @include mq(sp) {
+        transform: inherit;
+        position: relative;
+        top: inherit;
+        right: inherit;
+        text-align: center;
+      }
+    }
   }
+
   .search__heading {
     display: flex;
     align-items: end;

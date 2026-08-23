@@ -122,133 +122,124 @@ get_header('');
               <span class="viewMore__arrow" aria-hidden="true"></span>
             </a>
           </div>
-          <ul class="treatmentList">
-            <li>
-              <div class="title" data-popup="popup-a">機械治療</div>
-              <div id="popup-a" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Mechanical Treatment">機械治療</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">ノーリス</a></li>
-                    <li><a href="">Ｑスイッチレーザー</a></li>
-                    <li><a href="">ＣＯ２レーザー</a></li>
-                    <li><a href="">トーニング</a></li>
-                    <li><a href="">ダーマペン</a></li>
-                    <li><a href="">レーザーフェイシャル</a></li>
-                    <li><a href="">水光注射</a></li>
-                    <li><a href="">ハイフ</a></li>
-                    <li><a href="">ハイドラフェイシャル</a></li>
-                    <li><a href="">エレクトロポレーション</a></li>
-                    <li><a href="">イオン導入</a></li>
-                    <li><a href="">オムニラックス</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="title" data-popup="popup-b">注入治療</div>
-              <div id="popup-b" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Injection Treatment">注入治療</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">ボツリヌストキシン注（韓国製剤）</a></li>
-                    <li><a href="">ヒアルロン酸注射（アラガン社）</a></li>
-                    <li><a href="">脂肪溶解注射（カベリン）</a></li>
-                    <li><a href="">肌育注射</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="title" data-popup="popup-c">美肌治療</div>
-              <div id="popup-c" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Skin Treatment">美肌治療</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">ピーリング</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="title" data-popup="popup-d">糸リフト</div>
-              <div id="popup-d" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Thread Lift">糸リフト</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">テスリフト</a></li>
-                    <li><a href="">ＱＴＬ</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="title" data-popup="popup-e">脱毛</div>
-              <div id="popup-e" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Hair Removal">脱毛</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">医療脱毛</a></li>
-                    <li><a href="">メンズ医療脱毛</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li> <a class="title" href="">点滴・注射</a> </li>
-            <li>
-              <div class="title" data-popup="popup-f">ダイエット</div>
-              <div id="popup-f" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Diet">ダイエット</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">GLP1ダイエット</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li> <a class="title" href="">アートメイク</a> </li>
-            <li>
-              <div class="title" data-popup="popup-g">薄毛治療</div>
-              <div id="popup-g" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Hair Loss Treatment">薄毛治療</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">男性の薄毛治療</a></li>
-                    <li><a href="">女性の薄毛治療</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="title" data-popup="popup-h">ピアス</div>
-              <div id="popup-h" class="popup popup-hidden">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
-                  <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Piercing">ピアス</h4>
-                  <ul class="treatmentItem">
-                    <li><a href="">軟骨ピアス</a></li>
-                    <li><a href="">耳たぶ</a></li>
-                    <li><a href="">ボディーピアス</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <?php
+          $taxonomy = 'service_treatment';
+
+          $treatment_english_names = [
+            '機械治療'     => 'Mechanical Treatment',
+            '注入治療'     => 'Injection Treatment',
+            '美肌治療'     => 'Skin Treatment',
+            '糸リフト'     => 'Thread Lift',
+            '脱毛'         => 'Hair Removal',
+            '点滴・注射'   => 'IV Drip / Injection',
+            'ダイエット'   => 'Diet',
+            'アートメイク' => 'Permanent Makeup',
+            '薄毛治療'     => 'Hair Loss Treatment',
+            'ピアス'       => 'Piercing',
+          ];
+
+          $taxonomy = 'service_treatment';
+
+          $treatment_terms = theme_get_ordered_terms($taxonomy, [
+            'hide_empty' => true,
+          ]);
+
+          ?>
+
+          <?php if (!is_wp_error($treatment_terms) && !empty($treatment_terms)) : ?>
+
+            <ul class="treatmentList">
+
+              <?php foreach ($treatment_terms as $term) : ?>
+                <?php
+                // popup-タームスラッグ
+                $popup_id = 'popup-' . $term->slug;
+
+                $english_name = $treatment_english_names[$term->name] ?? '';
+
+                $service_query = new WP_Query([
+                  'post_type'      => 'service',
+                  'post_status'    => 'publish',
+                  'posts_per_page' => -1,
+                  'orderby'        => [
+                    'menu_order' => 'ASC',
+                    'date'       => 'DESC',
+                  ],
+                  'tax_query'      => [
+                    [
+                      'taxonomy' => $taxonomy,
+                      'field'    => 'term_id',
+                      'terms'    => $term->term_id,
+                    ],
+                  ],
+                ]);
+                ?>
+
+                <?php if ($service_query->have_posts()) : ?>
+
+                  <?php if ($service_query->post_count === 1) : ?>
+                    <?php
+                    // 投稿が1件だけの場合は、その記事へ直接リンク
+                    $single_service = $service_query->posts[0];
+                    ?>
+
+                    <li>
+                      <a
+                        class="title"
+                        href="<?php echo esc_url(get_permalink($single_service->ID)); ?>">
+                        <?php echo esc_html($term->name); ?>
+                      </a>
+                    </li>
+
+                  <?php else : ?>
+
+                    <li>
+                      <div
+                        class="title"
+                        data-popup="<?php echo esc_attr($popup_id); ?>">
+                        <?php echo esc_html($term->name); ?>
+                      </div>
+
+                      <div
+                        id="<?php echo esc_attr($popup_id); ?>"
+                        class="popup popup-hidden">
+                        <div class="popup-overlay"></div>
+
+                        <div class="popup-content">
+                          <button
+                            type="button"
+                            class="popup-close"
+                            aria-label="閉じる"></button>
+
+                          <h4
+                            class="heading-en center"
+                            data-en="<?php echo esc_attr($english_name); ?>">
+                            <?php echo esc_html($term->name); ?>
+                          </h4>
+
+                          <ul class="treatmentItem">
+
+                            <?php while ($service_query->have_posts()) : ?>
+                              <?php $service_query->the_post(); ?>
+
+                              <li>
+                                <a href="<?php the_permalink(); ?>">
+                                  <?php the_title(); ?>
+                                </a>
+                              </li>
+
+                            <?php endwhile; ?>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  <?php endif; ?>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
         </div>
       </div>
     </div>

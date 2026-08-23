@@ -12,23 +12,15 @@
 ---------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 172px;
 }
-.post_content .chapter {
-  scroll-margin-top: 240px;
-}
-.post_content .chapter_child {
-  scroll-margin-top: 150px;
+@media screen and (max-width: 1250px) {
+  html {
+    scroll-padding-top: 92px;
+  }
 }
 .toc_chapter {
   scroll-margin-top: 170px;
-}
-@media screen and (max-width: 1250px) {
-  .post_content .chapter {
-    scroll-margin-top: 150px;
-  }
-  .post_content .chapter_child {
-    scroll-margin-top: 60px;
-  }
 }
 /* ----------------------------------------------------------------------
  グローバルメニュー

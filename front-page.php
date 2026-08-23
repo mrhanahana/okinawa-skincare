@@ -63,6 +63,9 @@ get_header('');
               'hide_empty' => false,
             ]
           );
+
+          // serviceの施術一覧ページURL
+          $service_archive_url = get_post_type_archive_link('service');
           ?>
 
           <?php if (!is_wp_error($trouble_terms) && !empty($trouble_terms)) : ?>
@@ -78,13 +81,16 @@ get_header('');
                   'service_concern'
                 );
 
-                // タームページURL
-                $term_link = get_term_link($term);
+                // 施術一覧ページ内のリンクURL
+                $internal_link =
+                  $service_archive_url
+                  . '#'
+                  . $term->slug;
                 ?>
 
                 <li>
 
-                  <a href="<?php echo esc_url($term_link); ?>">
+                  <a href="<?php echo esc_url($internal_link); ?>">
 
                     <?php if ($image_url) : ?>
 

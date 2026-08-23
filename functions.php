@@ -3,12 +3,14 @@
 /************************************************************************************** 
 /* 親テーマの jscript.js を子テーマ版へ差し替える */
 /**************************************************************************************/
-function child_start_head_buffer() {
+function child_start_head_buffer()
+{
     ob_start('child_replace_parent_jscript');
 }
 add_action('wp_head', 'child_start_head_buffer', 0);
 
-function child_replace_parent_jscript($html) {
+function child_replace_parent_jscript($html)
+{
 
     $parent_js = get_template_directory_uri() . '/js/jscript.js';
     $child_js  = get_stylesheet_directory_uri() . '/js/jscript.js';
@@ -16,7 +18,8 @@ function child_replace_parent_jscript($html) {
     return str_replace($parent_js, $child_js, $html);
 }
 
-function child_end_head_buffer() {
+function child_end_head_buffer()
+{
     if (ob_get_level()) {
         ob_end_flush();
     }
@@ -32,7 +35,8 @@ require_once get_stylesheet_directory() . '/inc/enqueue.php';
 /************************************************************************************** 
 /* ドロワーメニュー用メニュー位置を追加 */
 /**************************************************************************************/
-function child_register_drawer_menu() {
+function child_register_drawer_menu()
+{
     register_nav_menu(
         'drawer_menu',
         'ドロワーメニュー'
@@ -52,6 +56,36 @@ add_action('after_setup_theme', function () {
     remove_action('wp_head', 'tcd_head');
 }, 20);
 
+/**************************************************************************************
+/* Taxonomy Manager
+/**************************************************************************************/
+
+require_once get_stylesheet_directory()
+    . '/inc/taxonomy-manager/config.php';
+
+require_once get_stylesheet_directory()
+    . '/inc/taxonomy-manager/taxonomy.php';
+
+require_once get_stylesheet_directory()
+    . '/inc/taxonomy-manager/image.php';
+
+require_once get_stylesheet_directory()
+    . '/inc/taxonomy-manager/sort.php';
+
+
+/************************************************************************************** 
+/* SVGのアップロードを許可 */
+/**************************************************************************************/
+function child_theme_allow_svg_upload($mimes)
+{
+    // 管理者だけSVGをアップロード可能にする
+    if (current_user_can('manage_options')) {
+        $mimes['svg'] = 'image/svg+xml';
+    }
+
+    return $mimes;
+}
+add_filter('upload_mimes', 'child_theme_allow_svg_upload');
 
 
 // 列の追加

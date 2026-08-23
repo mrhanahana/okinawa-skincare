@@ -1,8 +1,8 @@
 <?php
 $options = get_design_plus_option();
-get_header('test');
+get_header('');
 ?>
-<!--
+
 <section class="campaign">
   <div class="campaign__wrap">
     <?php
@@ -42,7 +42,7 @@ get_header('test');
     wp_reset_query(); ?>
   </div>
 </section>
-      -->
+
 <section class="search">
   <div class="content-wrap">
     <h2 class="heading">Menu</h2>
@@ -56,36 +56,61 @@ get_header('test');
               <span class="viewMore__arrow" aria-hidden="true"></span>
             </a>
           </div>
-          <ul class="troubleList">
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-01.svg" /></div>
-                <div class="title">にきび・にきび跡</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-02.svg" /></div>
-                <div class="title">しみ・くすみ</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-03.svg" /></div>
-                <div class="title">肝斑</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-04.svg" /></div>
-                <div class="title">赤ら顔・酒さ</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-05.svg" /></div>
-                <div class="title">ほくろ、イボ</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-06.svg" /></div>
-                <div class="title">毛穴</div>
-              </a> </li>
-            <li> <a href="">
-                <div class="icon"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_ico_trouble-07.svg" /></div>
-                <div class="title">しわ・たるみ</div>
-              </a> </li>
-          </ul>
+          <?php
+          $trouble_terms = theme_get_ordered_terms(
+            'service_concern',
+            [
+              'hide_empty' => false,
+            ]
+          );
+          ?>
+
+          <?php if (!is_wp_error($trouble_terms) && !empty($trouble_terms)) : ?>
+
+            <ul class="troubleList">
+
+              <?php foreach ($trouble_terms as $term) : ?>
+
+                <?php
+                // ターム画像URL
+                $image_url = theme_get_term_image_url(
+                  $term->term_id,
+                  'service_concern'
+                );
+
+                // タームページURL
+                $term_link = get_term_link($term);
+                ?>
+
+                <li>
+
+                  <a href="<?php echo esc_url($term_link); ?>">
+
+                    <?php if ($image_url) : ?>
+
+                      <div class="icon">
+
+                        <img
+                          src="<?php echo esc_url($image_url); ?>"
+                          alt="<?php echo esc_attr($term->name); ?>">
+
+                      </div>
+
+                    <?php endif; ?>
+
+                    <div class="title">
+                      <?php echo esc_html($term->name); ?>
+                    </div>
+
+                  </a>
+
+                </li>
+
+              <?php endforeach; ?>
+
+            </ul>
+
+          <?php endif; ?>
         </div>
       </div>
       <div class="treatment">
@@ -214,7 +239,7 @@ get_header('test');
                 <div class="popup-overlay"></div>
                 <div class="popup-content">
                   <button class="popup-close" aria-label="閉じる"></button>
-                  <h4 class="heading-en center" data-en="Earrings">ピアス</h4>
+                  <h4 class="heading-en center" data-en="Piercing">ピアス</h4>
                   <ul class="treatmentItem">
                     <li><a href="">軟骨ピアス</a></li>
                     <li><a href="">耳たぶ</a></li>

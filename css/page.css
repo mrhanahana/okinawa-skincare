@@ -23,7 +23,8 @@ section .content-wrap .common-inner {
 /* キャンペーン
 ---------------------------*/
 section.campaign {
-  padding: 120px 0;
+  padding-top: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
+  padding-bottom: clamp(8rem, 6.5142857143rem + 3.8095238095vw, 12rem);
   overflow: hidden;
   /* スライダー */
 }
@@ -141,22 +142,21 @@ section.search {
   /* お悩みから探す
   ---------------------------*/
 }
-section.search .trouble,
-section.search .treatment {
-  padding: 50px 20px 0;
-  box-sizing: border-box;
-}
 section.search .trouble {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 50px 20px 0;
+  box-sizing: border-box;
 }
 section.search .treatment {
   width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 50px 20px;
+  box-sizing: border-box;
 }
 section.search ul.troubleList {
   display: grid;

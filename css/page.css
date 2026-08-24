@@ -603,7 +603,6 @@ section#access dl dd strong {
 }
 #archive_service .service_archive_group {
   padding: 34px 38px 38px;
-  scroll-margin-top: 130px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 #archive_service .service_archive_term_title {
@@ -696,7 +695,6 @@ section#access dl dd strong {
   }
   #archive_service .service_archive_group {
     padding: 25px 20px 28px;
-    scroll-margin-top: 90px;
   }
   #archive_service .service_archive_term_title {
     margin-bottom: 15px;

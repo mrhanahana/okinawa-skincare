@@ -13,3 +13,16 @@
 body {
   color: var(--color-text);
 }
+
+/* ========================================
+   Html
+======================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 172px;
+}
+@media screen and (max-width: 1250px) {
+  html {
+    scroll-padding-top: 92px;
+  }
+}

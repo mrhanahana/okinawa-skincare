@@ -61,6 +61,56 @@
   filter: brightness(1.2);
 }
 
+/* read more
+---------------------------*/
+.button-more {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding-right: 70px;
+  color: #c9ab53;
+  line-height: 1;
+  cursor: pointer;
+
+  &.right {
+    margin-left: auto;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 0;
+    background-color: beige;
+    border: 1px solid #c9ab53;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.5s;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 1px;
+    top: 50%;
+    right: 10px;
+    background-color: #c9ab53;
+    transform: translateY(-50%);
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: #c9ab53;
+    }
+
+    &::after {
+      transform: translate(10px, -50%);
+    }
+  }
+}
 /* ========================================
    Heading
 ======================================== */

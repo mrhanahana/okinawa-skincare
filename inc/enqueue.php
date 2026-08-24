@@ -23,7 +23,7 @@ function child_enqueue_assets()
     get_stylesheet_directory_uri() . '/style.css',
     array('parent-style'),
     filemtime(
-      get_stylesheet_directory_uri() . '/style.css'
+      get_stylesheet_directory() . '/style.css'
     )
 
   );
@@ -32,18 +32,14 @@ function child_enqueue_assets()
     'base',
     get_stylesheet_directory_uri() . '/css/base.css',
     array('child-style'),
-    filemtime(
-      get_stylesheet_directory_uri() . '/css/base.css'
-    )
+    filemtime(get_stylesheet_directory() . '/css/base.css')
   );
 
   wp_enqueue_style(
     'layout',
     get_stylesheet_directory_uri() . '/css/layout.css',
     array('base'),
-    filemtime(
-      get_stylesheet_directory_uri() . '/css/layout.css'
-    )
+    filemtime(get_stylesheet_directory() . '/css/layout.css')
   );
 
   wp_enqueue_style(

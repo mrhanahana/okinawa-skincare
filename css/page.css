@@ -33,6 +33,11 @@ section.campaign .campaign__wrap {
   max-width: 90%;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  section.campaign .campaign__wrap h2 {
+    text-align: center;
+  }
+}
 
 #index_campaign_slider_top {
   max-width: 100%;
@@ -64,19 +69,17 @@ section.search .content-wrap {
 }
 section.search .content-wrap h2.heading {
   position: absolute;
-  transform-origin: left top;
-  transform: rotate(90deg);
+  writing-mode: vertical-rl;
   top: 100px;
-  right: -160px;
+  right: 0;
   padding: 0;
 }
 @media (max-width: 767px) {
   section.search .content-wrap h2.heading {
-    transform: inherit;
     position: relative;
-    top: inherit;
-    right: inherit;
     text-align: center;
+    writing-mode: horizontal-tb;
+    top: 0;
   }
 }
 section.search .search__heading {
@@ -286,6 +289,73 @@ section.search .popup-content {
 
 /* Concept
 ---------------------------*/
+section.concept {
+  background-color: #f5f5dc;
+}
+section.concept .content-wrap {
+  max-width: 1000px;
+  padding-top: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
+  padding-bottom: clamp(8rem, 6.5142857143rem + 3.8095238095vw, 12rem);
+}
+section.concept .content-wrap .concept__content {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-areas: "heading image" "text    image";
+  align-items: stretch;
+  column-gap: 80px;
+}
+section.concept .content-wrap .concept__content h2 {
+  grid-area: heading;
+}
+section.concept .content-wrap .concept__text {
+  grid-area: text;
+  position: relative;
+  min-width: 0;
+  line-height: 1.6;
+}
+section.concept .content-wrap .concept__text h3 {
+  font-size: clamp(1.6rem, 1.4514285714rem + 0.380952381vw, 2rem);
+  padding-bottom: 2rem;
+}
+section.concept .content-wrap .concept__text p {
+  padding-bottom: 1.5rem;
+}
+section.concept .content-wrap .concept__image {
+  grid-area: image;
+  min-width: 0;
+  min-height: 0;
+}
+section.concept .content-wrap .concept__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px 0 0 50px;
+}
+@media (max-width: 1023px) {
+  section.concept .content-wrap .concept__content {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "heading" "image" "text";
+    column-gap: 0;
+  }
+  section.concept .content-wrap .concept__content h2 {
+    text-align: center;
+  }
+  section.concept .content-wrap .concept__text h3 {
+    text-align: center;
+  }
+  section.concept .content-wrap .concept__image {
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+  section.concept .content-wrap .concept__image img {
+    height: auto;
+    aspect-ratio: 4/3;
+    border-radius: 30px 0 0 30px;
+    max-width: 500px;
+  }
+}
+
 /* Doctor
 ---------------------------*/
 section.home-doctor {

@@ -355,10 +355,7 @@ if (mb_strstr($browser, 'trident') || mb_strstr($browser, 'msie')) {
   document.body.addEventListener('touchstart', function() {}, false);
 </script>
 
-<?php if (is_front_page()) { ?>
-  <!-- slick slider読み込み add by hanahana 2021.07.25 -->
-  <link rel="stylesheet" type="text/css" href="https://okinawa-skincare.com/slick/slick-theme.css" media="screen" />
-<?php }; ?>
+
 
 <!-- ギャラリー表示用スクリプト -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

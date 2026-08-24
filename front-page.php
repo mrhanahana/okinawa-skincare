@@ -252,9 +252,25 @@ get_header();
   </div>
 </section>
 
+<section class="concept">
+  <div class="content-wrap">
+    <div class="concept__content">
+      <h2 class="heading gold">Concept</h2>
+      <div class="concept__text">
+        <h3 class="rich_font">肌に寄り添い、美しさを育む。<br />
+          安心と上質を備えた美容医療を。</h3>
+        <p>当院では、レーザー治療専門医が患者様一人ひとりのお悩みやご希望に寄り添い、丁寧なカウンセリングをもとに、適切な美容医療をご提案します。</p>
+        <p>美容皮膚科から医療脱毛まで、効果と安全性に配慮した多彩な施術をご用意。さまざまな肌のお悩みに、ワンストップでお応えします。</p>
+        <p>院内はプライバシーに配慮した完全個室です。周囲を気にせず、心からくつろいで施術を受けていただける、上質で居心地の良い空間を整えています。</p>
+        <a href="/about/" class="button-more right mt50">Read More</a>
+      </div>
+      <div class="concept__image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_concept.webp" /></div>
+    </div>
+  </div>
+</section>
 
-
-
+<!-- javaScriptエラー回避のため挿入 -->
+<div id="index_box_content"></div>
 
 </div>
 <!-- END #index_content -->

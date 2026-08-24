@@ -2373,12 +2373,27 @@ function child_tcd_head()
           autoplaySpeed: 5000,
           speed: 700,
           responsive: [{
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+              breakpoint: 1440,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 1023,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
             }
-          }]
+          ]
         });
       });
     </script>

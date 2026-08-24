@@ -38,9 +38,18 @@ function child_enqueue_assets()
   );
 
   wp_enqueue_style(
+    'layout',
+    get_stylesheet_directory_uri() . '/css/layout.css',
+    array('base'),
+    filemtime(
+      get_stylesheet_directory_uri() . '/css/layout.css'
+    )
+  );
+
+  wp_enqueue_style(
     'component',
     get_stylesheet_directory_uri() . '/css/component.css',
-    array('base'),
+    array('layout'),
     filemtime(get_stylesheet_directory() . '/css/component.css')
   );
 

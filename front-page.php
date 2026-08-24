@@ -1,6 +1,6 @@
 <?php
 $options = get_design_plus_option();
-get_header('');
+get_header();
 ?>
 
 <section class="campaign">
@@ -256,10 +256,7 @@ get_header('');
 
 
 
-
-
-
 </div>
 <!-- END #index_content -->
 
-<?php get_footer('test'); ?>
+<?php get_footer(); ?>

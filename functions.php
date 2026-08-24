@@ -33,6 +33,67 @@ require_once get_stylesheet_directory() . '/inc/enqueue.php';
 
 
 /************************************************************************************** 
+/* オリジナルのドロワーメニューを有効化・設定 */
+/**************************************************************************************/
+register_nav_menus([
+    'drawer-nav' => 'オリジナルドロワーナビ',
+]);
+
+/**
+ * ドロワーメニューの親項目に開閉ボタンを追加
+ */
+function add_drawer_child_menu_button(
+    $item_output,
+    $item,
+    $depth,
+    $args
+) {
+    // drawer-nav以外には適用しない
+    if (
+        empty($args->theme_location) ||
+        $args->theme_location !== 'drawer-nav'
+    ) {
+        return $item_output;
+    }
+
+    // 子メニューがない項目には追加しない
+    if (
+        empty($item->classes) ||
+        !in_array('menu-item-has-children', $item->classes, true)
+    ) {
+        return $item_output;
+    }
+
+    $button = '
+    <button
+      type="button"
+      class="child-menu-button"
+      aria-label="子メニューを開く"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+  ';
+
+    // 親リンクの直後にボタンを追加
+    $item_output = preg_replace(
+        '/<\/a>/',
+        '</a>' . $button,
+        $item_output,
+        1
+    );
+
+    return $item_output;
+}
+
+add_filter(
+    'walker_nav_menu_start_el',
+    'add_drawer_child_menu_button',
+    10,
+    4
+);
+
+/************************************************************************************** 
 /* ドロワーメニュー用メニュー位置を追加 */
 /**************************************************************************************/
 function child_register_drawer_menu()

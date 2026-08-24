@@ -12,8 +12,8 @@ if ($options['show_footer_banner1'] || $options['show_footer_banner2'] || $optio
     ?>
         <div class="box box<?php echo $i; ?>">
           <a class="link animate_background" href="<?php echo esc_url($options['footer_banner_url' . $i]); ?>" <?php if ($options['footer_banner_target' . $i]) {
-                                                                                                                echo 'target="_blank"';
-                                                                                                              }; ?>>
+                                                                                                                  echo 'target="_blank"';
+                                                                                                                }; ?>>
             <div class="catch frost_bg">
               <p class="title rich_font"><?php echo esc_html($options['footer_banner_title' . $i]); ?></p>
               <div class="blur_image">
@@ -55,8 +55,8 @@ if ($options['show_footer_company_info'] || $options['show_footer_info1'] || $op
             <?php if ($options['show_footer_info_button' . $i]) { ?>
               <div class="button">
                 <a href="<?php echo esc_url($options['footer_info_url' . $i]); ?>" <?php if ($options['footer_info_target' . $i]) {
-                                                                                    echo ' target="_blank"';
-                                                                                  }; ?>><?php echo esc_html($options['footer_info_button_label' . $i]); ?></a>
+                                                                                      echo ' target="_blank"';
+                                                                                    }; ?>><?php echo esc_html($options['footer_info_button_label' . $i]); ?></a>
               </div>
             <?php }; ?>
           </div><!-- END .footer_info_content -->
@@ -122,7 +122,7 @@ if ($options['show_footer_company_info'] || $options['show_footer_info1'] || $op
                 <h3 class="footer_headline"><a href="<?php echo esc_url(get_post_type_archive_link('service')); ?>"><?php echo esc_html($options['service_label']); ?></a></h3>
               <?php } else { ?>
                 <h3 class="footer_headline"><a href="<?php echo esc_url(get_term_link($term, 'service_category')); ?>"><?php echo esc_html($term->name);
-                                                                                                                      if (!empty($custom_fields['sub_title'])) { ?><span><?php echo esc_html($custom_fields['sub_title']); ?></span><?php }; ?></a></h3>
+                                                                                                                        if (!empty($custom_fields['sub_title'])) { ?><span><?php echo esc_html($custom_fields['sub_title']); ?></span><?php }; ?></a></h3>
               <?php }; ?>
               <ol>
                 <?php
@@ -190,8 +190,8 @@ if ((is_mobile() && $options['show_footer_button1']) || (is_mobile() && $options
       ?>
           <div class="button button<?php echo $i; ?>">
             <a href="<?php echo esc_url($options['footer_button_url' . $i]); ?>" <?php if ($options['footer_button_target' . $i]) {
-                                                                                  echo ' target="_blank"';
-                                                                                }; ?>><?php echo esc_html($options['footer_button_label' . $i]); ?></a>
+                                                                                    echo ' target="_blank"';
+                                                                                  }; ?>><?php echo esc_html($options['footer_button_label' . $i]); ?></a>
           </div>
       <?php };
       endfor; ?>
@@ -207,8 +207,8 @@ if ((is_mobile() && $options['show_footer_button1']) || (is_mobile() && $options
       ?>
           <div class="button button<?php echo $i; ?>">
             <a href="<?php echo esc_url($options['header_button_url' . $i]); ?>" <?php if ($options['header_button_target' . $i]) {
-                                                                                  echo ' target="_blank"';
-                                                                                }; ?>><?php echo esc_html($options['header_button_label' . $i]); ?></a>
+                                                                                    echo ' target="_blank"';
+                                                                                  }; ?>><?php echo esc_html($options['header_button_label' . $i]); ?></a>
           </div>
       <?php };
       endfor; ?>
@@ -227,39 +227,16 @@ if (is_mobile()) {
 
 </div><!-- #container -->
 
-<?php // mobile menu -------------------------------------------- 
-?>
-<div id="mobile_menu">
+<div class="drawer-overlay"></div>
+<nav id="drawer-nav">
   <?php
   wp_nav_menu(array(
-    'theme_location' => 'drawer_menu',
-    'container'      => 'nav',
-    'container_id'   => 'drawer_menu',
-    'menu_class'     => 'drawer_menu_list',
-    'fallback_cb'    => false,
+    'theme_location' => 'drawer-nav',
+    'container' => false,
+    'items_wrap' => '<ul id="drawernavul" class="menu">%3$s</ul>',
   ));
   ?>
-  <div id="header_mobile_banner">
-    <?php
-    for ($i = 1; $i <= 3; $i++):
-      if ($options['mobile_menu_ad_code' . $i] || $options['mobile_menu_ad_image' . $i]) {
-        if ($options['mobile_menu_ad_code' . $i]) {
-    ?>
-          <div class="banner">
-            <?php echo $options['mobile_menu_ad_code' . $i]; ?>
-          </div>
-        <?php
-        } else {
-          $mobile_menu_image = wp_get_attachment_image_src($options['mobile_menu_ad_image' . $i], 'full');
-        ?>
-          <div class="banner">
-            <a href="<?php echo esc_url($options['mobile_menu_ad_url' . $i]); ?>" <?php if ($options['mobile_menu_ad_target' . $i] == 1) { ?> target="_blank" <?php }; ?>><img src="<?php echo esc_attr($mobile_menu_image[0]); ?>" alt="" title="" /></a>
-          </div>
-    <?php };
-      };
-    endfor; ?>
-  </div><!-- END #header_mobile_banner -->
-</div>
+</nav>
 
 <?php
 // load script -----------------------------------------------------------

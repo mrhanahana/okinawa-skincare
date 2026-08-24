@@ -1,0 +1,141 @@
+/* ドロワーメニュー
+---------------------------*/
+.menu-button {
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+
+  &::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0c9";
+    font-weight: 900;
+    color: var(--color-black);
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    margin: auto;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  span {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.drawer-overlay {
+  transition: var(--transition);
+  &.active {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+  }
+}
+#drawer-nav {
+  color: var(--color-white);
+  background: var(--color-theme-sub);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 0;
+  z-index: 9999;
+  width: 80%;
+  max-width: 450px;
+  height: 100%;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  transition: var(--transition);
+  overflow-y: scroll;
+  position: fixed;
+  right: -100%;
+  &.active {
+    right: 0;
+  }
+
+  .cta {
+    border: 1px solid var(--color-gray);
+    padding: 15px;
+
+    .tel {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      &::before {
+        font-size: 2rem;
+      }
+    }
+    .mail {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+ul#drawernavul {
+  font-size: 13px;
+
+  li {
+    &.menu-item-has-children {
+      position: relative;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.6;
+      padding: 18px 20px;
+      margin: 0;
+      color: var(--color-white);
+      border-bottom: 1px solid #504315;
+    }
+    .child-menu-button {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      padding: 0;
+      border: 0;
+      color: #fff;
+      background: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: #c9ab53;
+      }
+    }
+    .sub-menu {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+}

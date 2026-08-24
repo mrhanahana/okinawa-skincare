@@ -8,6 +8,11 @@
 /* ========================================
    Haeder
 ======================================== */
+#header_top_inner {
+  display: flex;
+  align-items: center;
+}
+
 #menu_button {
   display: block !important;
   position: absolute;

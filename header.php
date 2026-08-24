@@ -132,11 +132,7 @@
             <div id="header_logo">
               <?php header_logo(); ?>
             </div>
-            <?php if (has_nav_menu('global-menu')) { ?>
-              <a href="#" id="menu_button"><span>
-                  <?php _e('menu', 'tcd-w'); ?>
-                </span></a>
-            <?php }; ?>
+            <div href="#" class="menu-button"><span> メニュー </span></div>
             <?php if ($options['show_header_button1'] || $options['show_header_button2']) { ?>
               <div id="header_button" class="clearfix">
                 <?php

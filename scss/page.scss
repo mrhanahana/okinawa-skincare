@@ -21,7 +21,7 @@ section .content-wrap {
 }
 /* キャンペーン
 ---------------------------*/
-section.campaign {
+section.home-campaign {
   padding-top: fluid(40, 80);
   padding-bottom: fluid(80, 120);
   overflow: hidden;
@@ -70,7 +70,7 @@ section.campaign {
 }
 /* 施術メニュー共通
 ---------------------------*/
-section.search {
+section.home-search {
   background: #fff;
 
   .content-wrap {
@@ -332,7 +332,7 @@ section.search {
 
 /* Concept
 ---------------------------*/
-section.concept {
+section.home-concept {
   background-color: #f5f5dc;
 
   .content-wrap {
@@ -419,196 +419,204 @@ section.concept {
 ---------------------------*/
 section.home-doctor {
   position: relative;
-  background: url("../img/img_home_doctor_bg.svg") center no-repeat;
-  background-size: cover;
-}
-section.home-doctor .content-wrap {
-  display: grid;
-  column-gap: 50px;
-  grid-template-columns: 35% 30% 1fr;
-  grid-template-areas: "image content profile";
-  max-width: 1600px;
-  padding: 120px 0 0 0;
-  margin-right: 100px;
-}
-section.home-doctor .doctor-image {
-  grid-area: image;
-  position: relative;
-}
-section.home-doctor .doctor-image img {
-  position: absolute;
-  right: -100px;
-  bottom: 0;
-  max-width: 600px;
-}
-section.home-doctor .doctor-content {
-  position: relative;
-  grid-area: content;
-}
-section.home-doctor .doctor-content .headline,
-section.home-doctor .doctor-content .catch {
-  text-align: left;
-}
-section.home-doctor .doctor-catch {
-  margin: 40px 0;
-  font-size: 1.8rem;
-  line-height: 1.8;
-}
-section.home-doctor .doctor-message {
-  font-size: 1rem;
-  line-height: 2.2;
-}
-section.home-doctor .doctor-name {
-  margin: 10px 0 150px;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-section.home-doctor .doctor-sign {
-  position: relative;
-}
-section.home-doctor .doctor-name span {
-  font-size: 1.2rem;
-  margin-left: 30px;
-  color: #555555;
-}
-section.home-doctor .position {
-  margin: 50px 0 0;
-  font-size: 1.2rem;
-}
-section.home-doctor .sign {
-  position: absolute;
-  bottom: -60px;
-  right: -50px;
-  transform: rotate(350deg);
-  font-size: 5rem;
-  font-family: "filmotype-lacrosse", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #ccb07a;
-  opacity: 0.8;
-}
-section.home-doctor .index_cb_button a {
-  color: #ffffff;
-  background: #c9ab53;
-}
-section.home-doctor .index_cb_button a:hover {
-  background: #66572a;
-}
-.doctor-profile {
-  grid-area: profile;
-  margin: 0 0 60px;
-  padding: 40px;
-  background: rgb(255, 255, 255, 0.3);
-  border: 1px solid #e7dbc1;
-  border-radius: 10px;
-  height: fit-content;
-}
-.doctor-profile .title {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-.doctor-profile .item:not(:last-child) {
-  margin-bottom: 35px;
-}
-.doctor-profile ul li {
-  line-height: 2;
-}
-section.home-doctor .doctor-image-sp,
-section.home-doctor .index_cb_button.sp {
-  display: none;
-}
-@media (max-width: 1250px) {
-  section.home-doctor .content-wrap {
-    grid-template-columns: 40% 1fr;
-    grid-template-areas:
-      "image content"
-      "profile profile";
-    margin: 0;
-  }
-  section.home-doctor .sign {
-    right: auto;
-    left: 18%;
-  }
-  .doctor-profile {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 30px;
-    border-left: none;
-    border-radius: 0 10px 10px 0;
-  }
-}
-@media (max-width: 767px) {
-  section.home-doctor .content-wrap {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "image"
-      "profile";
-    margin: 0 auto;
-  }
-  section.home-doctor .doctor-image img.pc {
-    display: none;
-  }
-  section.home-doctor .doctor-catch {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  section.home-doctor .doctor-content .headline,
-  section.home-doctor .doctor-content .catch {
-    text-align: center;
-  }
-  section.home-doctor .doctor-sign {
+  background: #f5f5f5;
+
+  .content-wrap {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  section.home-doctor .sign {
-    position: relative;
-    right: 10px;
-    left: auto;
-    bottom: -10px;
-    font-size: 3rem;
-  }
-  section.home-doctor .position {
-    font-size: 0.8rem;
-    margin-top: 0;
-    white-space: nowrap;
-  }
-  section.home-doctor .doctor-name {
-    display: block;
-    margin-bottom: 0;
-  }
-  section.home-doctor .doctor-name span {
-    margin: 10px 0 0;
-    display: block;
-    font-size: 1rem;
-  }
-  section.home-doctor .index_cb_button.pc {
-    display: none;
-  }
-  section.home-doctor .doctor-image-sp {
-    display: block;
-    text-align: center;
-  }
-  section.home-doctor .doctor-image-sp img {
-    max-width: 100%;
-    border-radius: 20px;
-  }
-  section.home-doctor .index_cb_button.sp {
-    display: block;
-    margin-top: 0 !important;
-  }
-  .doctor-profile {
-    margin-top: 20px;
-    border-left: 1px solid #e7dbc1;
-    border-radius: 10px;
+    column-gap: fluid(20, 50);
+    grid-template-columns: minmax(0, 400px) 40% minmax(0, 400px);
+    grid-template-areas: "image content profile";
+    margin: 0 auto 0 0;
+    padding-block: fluid(40, 80);
+    padding-right: fluid(40, 80);
+    padding-left: 0;
+    box-sizing: border-box;
+
+    h2.heading {
+      position: absolute;
+      writing-mode: vertical-rl;
+      top: 100px;
+      right: 0;
+      padding: 0 10px 0 0;
+    }
+
+    .doctor-image {
+      grid-area: image;
+      position: relative;
+      background: #ccc;
+      border-radius: 0 50px 50px 0;
+      height: max-content;
+      max-width: 500px;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .doctor-content {
+      position: relative;
+      grid-area: content;
+      padding: 2rem 0;
+
+      .headline,
+      .catch {
+        text-align: left;
+      }
+
+      .doctor-catch {
+        font-size: fluid(12, 20);
+        padding-bottom: 2rem;
+        line-height: 2.2rem;
+      }
+
+      .doctor-message {
+        line-height: 1.6;
+        padding-bottom: 1.5rem;
+      }
+
+      .doctor-name {
+        margin: 10px 0 0;
+        font-size: fluid(15, 20);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-weight: normal;
+      }
+
+      .doctor-sign {
+        position: relative;
+      }
+
+      .position {
+        margin: 30px 0 20px;
+      }
+
+      .sign {
+        position: absolute;
+        bottom: -10px;
+        left: 150px;
+        transform: rotate(350deg);
+        font-size: fluid(20, 40);
+        font-family: "tangerine", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #ccb07a;
+        opacity: 0.8;
+      }
+    }
+
+    .doctor-profile {
+      grid-area: profile;
+      margin: 0;
+      padding: 30px;
+      background: rgb(255, 255, 255, 0.3);
+      border: 1px solid #e7dbc1;
+      border-radius: 10px;
+      height: fit-content;
+      font-size: 10px;
+
+      .title {
+        margin-bottom: 5px;
+        font-size: 0.8rem;
+      }
+      .item:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      ul li {
+        line-height: 1.6;
+      }
+    }
+
+    @include mq(pc) {
+      grid-template-columns: minmax(0, 400px) 1fr;
+      grid-template-areas:
+        "heading heading"
+        "image content"
+        "profile profile";
+      padding-right: 0;
+      margin: 0;
+
+      h2.heading {
+        grid-area: heading;
+        position: relative;
+        writing-mode: horizontal-tb;
+        text-align: center;
+        top: 0;
+        padding: 0 0 60px 0;
+      }
+
+      .doctor-image {
+        padding-left: fluid(10, 30);
+      }
+      .doctor-content {
+        padding: 0;
+      }
+
+      .doctor-profile {
+        display: none;
+      }
+    }
+    @include mq(tb) {
+      .doctor-content {
+        .position {
+          margin: 0 0 20px;
+        }
+      }
+    }
+
+    @include mq(sp) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "image"
+        "content"
+        "profile";
+      padding: 120px 0;
+      margin: 0 auto;
+
+      .doctor-image {
+        padding-left: 0;
+        margin: 0 auto 10px;
+        img {
+          aspect-ratio: 1 / 1;
+          object-position: center top;
+        }
+      }
+      .doctor-content {
+        .doctor-catch {
+          text-align: center;
+        }
+        .doctor-sign {
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          width: fit-content;
+          gap: 10px;
+          margin: 20px auto;
+        }
+        .sign {
+          position: relative;
+          right: 10px;
+          left: auto;
+          bottom: -10px;
+        }
+        .position {
+          font-size: 10px;
+          margin-top: 0;
+          white-space: nowrap;
+        }
+        .doctor-name {
+          display: block;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
+
 /* お知らせ
 ---------------------------*/
 

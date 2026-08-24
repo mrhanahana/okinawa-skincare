@@ -3,7 +3,7 @@ $options = get_design_plus_option();
 get_header();
 ?>
 
-<section class="campaign">
+<section class="home-campaign">
   <div class="campaign__wrap">
     <?php
     $post_num = $options['index_campaign_num'];
@@ -43,7 +43,7 @@ get_header();
   </div>
 </section>
 
-<section class="search">
+<section class="home-search">
   <div class="content-wrap">
     <h2 class="heading">Menu</h2>
     <div class="info flexC">
@@ -252,7 +252,7 @@ get_header();
   </div>
 </section>
 
-<section class="concept">
+<section class="home-concept">
   <div class="content-wrap">
     <div class="concept__content">
       <h2 class="heading gold">Concept</h2>
@@ -268,6 +268,64 @@ get_header();
     </div>
   </div>
 </section>
+
+<section class="home-doctor">
+  <div class="content-wrap">
+    <h2 class="heading gold">Doctor</h2>
+    <div class="doctor-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_y.maeda.webp" alt="前田由紀" /></div>
+    <div class="doctor-content">
+      <p class="doctor-catch rich_font_type3">患者様一人ひとりに、<br class="sp" />本当に必要な美容医療を。</p>
+      <p class="doctor-message">「見た目」は、単なる整容にとどまらず、心も整えてくれる大切な要素といえます。にきびや肌荒れといった肌トラブルからエイジングサインのしみ・しわ・たるみ・赤みまで、あらゆる年代でQuality Of Lifeに関係しています。</p>
+      <p class="doctor-message">見た目の老化メカニズムは解明が進み、美容医療の質も年々上がっています。その反面、数多くの治療や治療機器があることから、どの治療が自分の症状にあっているのかわからないと相談に来られる方が多くおられます。</p>
+      <p class="doctor-message">皆様の悩みに寄り添いながら、しっかりとコミュニケーションをとり、より良い治療と適正な料金で美容診療にあたります。安心して皆様からお気軽にご相談を頂けるように診療に努めてまいります。どうぞよろしくお願いいたします。</p>
+      <div class="doctor-sign">
+        <div class="doctor-sign-name">
+          <div class="position">沖縄スキンケアクリニック 院長</div>
+          <div class="doctor-name rich_font">前田 由紀</div>
+        </div>
+        <div class="sign">Yuki Maeda</div>
+      </div>
+      <a href="/about/" class="button-more right mt50">Read More</a>
+    </div>
+    <aside class="doctor-profile">
+      <div class="item">
+        <div class="title">経歴</div>
+        <ul>
+          <li>大阪府出身</li>
+          <li>大阪市立大学 医学部卒業</li>
+          <li>大阪市立大学 医学部付属病院形成外科 勤務</li>
+          <li>東京都内 レーザー専門総合病院 美容皮膚科 勤務</li>
+          <li>沖縄スキンケアクリニック 院長</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="title">所属学会</div>
+        <ul>
+          <li>日本形成外科学会</li>
+          <li>日本皮膚科学会</li>
+          <li>日本美容皮膚科学会</li>
+          <li>日本レーザー医学会</li>
+          <li>日本レーザー治療学会</li>
+          <li>日本抗加齢医学会</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="title">免許</div>
+        <ul>
+          <li>医師免許</li>
+          <li>日本形成外科学会 形成外科専門医</li>
+          <li>日本レーザー医学会 レーザー専門医</li>
+          <li>日本レーザー医学会 レーザー指導医</li>
+          <li>抗加齢医学会専門医</li>
+          <li>日本形成外科学会 レーザー分野指導医</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
 
 <!-- javaScriptエラー回避のため挿入 -->
 <div id="index_box_content"></div>

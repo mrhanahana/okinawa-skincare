@@ -22,19 +22,19 @@ section .content-wrap .common-inner {
 
 /* キャンペーン
 ---------------------------*/
-section.campaign {
+section.home-campaign {
   padding-top: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
   padding-bottom: clamp(8rem, 6.5142857143rem + 3.8095238095vw, 12rem);
   overflow: hidden;
   background: #f5f5f5;
   /* スライダー */
 }
-section.campaign .campaign__wrap {
+section.home-campaign .campaign__wrap {
   max-width: 90%;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  section.campaign .campaign__wrap h2 {
+  section.home-campaign .campaign__wrap h2 {
     text-align: center;
   }
 }
@@ -61,13 +61,13 @@ section.campaign .campaign__wrap {
 
 /* 施術メニュー共通
 ---------------------------*/
-section.search {
+section.home-search {
   background: #fff;
 }
-section.search .content-wrap {
+section.home-search .content-wrap {
   position: relative;
 }
-section.search .content-wrap h2.heading {
+section.home-search .content-wrap h2.heading {
   position: absolute;
   writing-mode: vertical-rl;
   top: 100px;
@@ -75,14 +75,14 @@ section.search .content-wrap h2.heading {
   padding: 0;
 }
 @media (max-width: 767px) {
-  section.search .content-wrap h2.heading {
+  section.home-search .content-wrap h2.heading {
     position: relative;
     text-align: center;
     writing-mode: horizontal-tb;
     top: 0;
   }
 }
-section.search .search__heading {
+section.home-search .search__heading {
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -91,14 +91,14 @@ section.search .search__heading {
   padding-bottom: 10px;
   border-bottom: 1px solid #000;
 }
-section.search .headLine {
+section.home-search .headLine {
   margin: 0;
   font-size: clamp(1rem, 0.7771428571rem + 0.5714285714vw, 1.6rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   font-family: YakuHanMP, "Noto Serif JP", serif;
 }
-section.search .viewMore {
+section.home-search .viewMore {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -107,14 +107,14 @@ section.search .viewMore {
   letter-spacing: 0.08em;
   text-decoration: none;
 }
-section.search .viewMore__arrow {
+section.home-search .viewMore__arrow {
   position: relative;
   display: block;
   width: 80px;
   height: 10px;
   flex-shrink: 0;
 }
-section.search .viewMore__arrow::before {
+section.home-search .viewMore__arrow::before {
   content: "";
   position: absolute;
   left: 0;
@@ -124,7 +124,7 @@ section.search .viewMore__arrow::before {
   background-color: currentColor;
   transition: width 0.3s ease;
 }
-section.search .viewMore__arrow::after {
+section.home-search .viewMore__arrow::after {
   content: "";
   position: absolute;
   left: 57px;
@@ -136,17 +136,17 @@ section.search .viewMore__arrow::after {
   transform-origin: right bottom;
   transition: left 0.3s ease;
 }
-section.search .viewMore:hover .viewMore__arrow::before {
+section.home-search .viewMore:hover .viewMore__arrow::before {
   width: 80px;
 }
-section.search .viewMore:hover .viewMore__arrow::after {
+section.home-search .viewMore:hover .viewMore__arrow::after {
   left: 70px;
 }
-section.search {
+section.home-search {
   /* お悩みから探す
   ---------------------------*/
 }
-section.search .trouble {
+section.home-search .trouble {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -154,7 +154,7 @@ section.search .trouble {
   padding: 50px 20px 0;
   box-sizing: border-box;
 }
-section.search .treatment {
+section.home-search .treatment {
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -162,18 +162,18 @@ section.search .treatment {
   padding: 50px 20px;
   box-sizing: border-box;
 }
-section.search ul.troubleList {
+section.home-search ul.troubleList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-section.search .trouble .troubleList li {
+section.home-search .trouble .troubleList li {
   background: #fff;
 }
-section.search .trouble .troubleList li.transparent {
+section.home-search .trouble .troubleList li.transparent {
   opacity: 0;
 }
-section.search .trouble .troubleList a {
+section.home-search .trouble .troubleList a {
   display: block;
   text-align: center;
   font-size: max(10px, 1.2rem);
@@ -182,11 +182,11 @@ section.search .trouble .troubleList a {
   margin: 0 auto;
   transition: 0.5s;
 }
-section.search .trouble .troubleList a img {
+section.home-search .trouble .troubleList a img {
   width: 100%;
   max-width: 130px;
 }
-section.search .trouble .troubleList a .title {
+section.home-search .trouble .troubleList a .title {
   position: relative;
   width: 100%;
   margin: 10px 0;
@@ -194,14 +194,14 @@ section.search .trouble .troubleList a .title {
   font-size: clamp(0.8rem, 0.7257142857rem + 0.1904761905vw, 1rem);
   line-height: 1rem;
 }
-section.search .trouble .troubleList a:hover {
+section.home-search .trouble .troubleList a:hover {
   transform: translateY(-5px);
 }
-section.search {
+section.home-search {
   /* 施術から探す
   ---------------------------*/
 }
-section.search .treatmentList > li {
+section.home-search .treatmentList > li {
   border: none;
   background: #fff;
   margin: 0;
@@ -209,7 +209,7 @@ section.search .treatmentList > li {
   transition: 0.3s;
   border-bottom: 1px dotted #ccc;
 }
-section.search .treatmentList li .title {
+section.home-search .treatmentList li .title {
   cursor: pointer;
   position: relative;
   display: block;
@@ -217,7 +217,7 @@ section.search .treatmentList li .title {
   padding: 3% 50px 3% 3%;
   line-height: 1rem;
 }
-section.search .treatmentList li .title::before {
+section.home-search .treatmentList li .title::before {
   border: none;
   content: "";
   position: absolute;
@@ -228,7 +228,7 @@ section.search .treatmentList li .title::before {
   background-color: #000;
   transform: translateY(-50%);
 }
-section.search .treatmentList li .title::after {
+section.home-search .treatmentList li .title::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -240,10 +240,10 @@ section.search .treatmentList li .title::after {
   transform-origin: center;
   transition: transform 0.3s ease;
 }
-section.search .treatmentList li .title.close::after {
+section.home-search .treatmentList li .title.close::after {
   transform: translateY(-50%) rotate(90deg);
 }
-section.search .treatmentList li .treatmentItem a {
+section.home-search .treatmentList li .treatmentItem a {
   display: block;
   border: 1px solid var(--color-theme);
   border-radius: 10px;
@@ -251,37 +251,37 @@ section.search .treatmentList li .treatmentItem a {
   text-align: center;
   padding-block: 10px;
 }
-section.search .treatmentList li .treatmentItem a:hover {
+section.home-search .treatmentList li .treatmentItem a:hover {
   color: var(--color-white);
   background-color: var(--color-theme);
 }
 @media (max-width: 1023px) {
-  section.search .info {
+  section.home-search .info {
     display: block;
   }
-  section.search .trouble,
-  section.search .treatment {
+  section.home-search .trouble,
+  section.home-search .treatment {
     width: 80%;
     margin: 0 auto;
     padding-inline: 0;
   }
 }
 @media (max-width: 767px) {
-  section.search .trouble,
-  section.search .treatment {
+  section.home-search .trouble,
+  section.home-search .treatment {
     width: 96%;
   }
-  section.search .trouble ul.troubleList,
-  section.search .treatment ul.troubleList {
+  section.home-search .trouble ul.troubleList,
+  section.home-search .treatment ul.troubleList {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  section.search .trouble ul.troubleList a img,
-  section.search .treatment ul.troubleList a img {
+  section.home-search .trouble ul.troubleList a img,
+  section.home-search .treatment ul.troubleList a img {
     max-width: 100px;
   }
 }
-section.search .popup-content {
+section.home-search .popup-content {
   box-sizing: border-box;
   padding-inline: clamp(2rem, 1.2571428571rem + 1.9047619048vw, 4rem);
   padding-bottom: clamp(2rem, 1.2571428571rem + 1.9047619048vw, 4rem);
@@ -289,43 +289,43 @@ section.search .popup-content {
 
 /* Concept
 ---------------------------*/
-section.concept {
+section.home-concept {
   background-color: #f5f5dc;
 }
-section.concept .content-wrap {
+section.home-concept .content-wrap {
   max-width: 1000px;
   padding-top: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
   padding-bottom: clamp(8rem, 6.5142857143rem + 3.8095238095vw, 12rem);
 }
-section.concept .content-wrap .concept__content {
+section.home-concept .content-wrap .concept__content {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   grid-template-areas: "heading image" "text    image";
   align-items: stretch;
   column-gap: 80px;
 }
-section.concept .content-wrap .concept__content h2 {
+section.home-concept .content-wrap .concept__content h2 {
   grid-area: heading;
 }
-section.concept .content-wrap .concept__text {
+section.home-concept .content-wrap .concept__text {
   grid-area: text;
   position: relative;
   min-width: 0;
   line-height: 1.6;
 }
-section.concept .content-wrap .concept__text h3 {
+section.home-concept .content-wrap .concept__text h3 {
   font-size: clamp(1.6rem, 1.4514285714rem + 0.380952381vw, 2rem);
   padding-bottom: 2rem;
 }
-section.concept .content-wrap .concept__text p {
+section.home-concept .content-wrap .concept__text p {
   padding-bottom: 1.5rem;
 }
-section.concept .content-wrap .concept__image {
+section.home-concept .content-wrap .concept__image {
   grid-area: image;
   min-width: 0;
   min-height: 0;
 }
-section.concept .content-wrap .concept__image img {
+section.home-concept .content-wrap .concept__image img {
   display: block;
   width: 100%;
   height: 100%;
@@ -333,22 +333,22 @@ section.concept .content-wrap .concept__image img {
   border-radius: 50px 0 0 50px;
 }
 @media (max-width: 1023px) {
-  section.concept .content-wrap .concept__content {
+  section.home-concept .content-wrap .concept__content {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "heading" "image" "text";
     column-gap: 0;
   }
-  section.concept .content-wrap .concept__content h2 {
+  section.home-concept .content-wrap .concept__content h2 {
     text-align: center;
   }
-  section.concept .content-wrap .concept__text h3 {
+  section.home-concept .content-wrap .concept__text h3 {
     text-align: center;
   }
-  section.concept .content-wrap .concept__image {
+  section.home-concept .content-wrap .concept__image {
     text-align: center;
     margin: 0 auto 10px;
   }
-  section.concept .content-wrap .concept__image img {
+  section.home-concept .content-wrap .concept__image img {
     height: auto;
     aspect-ratio: 4/3;
     border-radius: 30px 0 0 30px;
@@ -360,211 +360,178 @@ section.concept .content-wrap .concept__image img {
 ---------------------------*/
 section.home-doctor {
   position: relative;
-  background: url("../img/img_home_doctor_bg.svg") center no-repeat;
-  background-size: cover;
+  background: #f5f5f5;
 }
-
 section.home-doctor .content-wrap {
+  position: relative;
   display: grid;
-  column-gap: 50px;
-  grid-template-columns: 35% 30% 1fr;
+  column-gap: clamp(2rem, 0.8857142857rem + 2.8571428571vw, 5rem);
+  grid-template-columns: minmax(0, 400px) 40% minmax(0, 400px);
   grid-template-areas: "image content profile";
-  max-width: 1600px;
-  padding: 120px 0 0 0;
-  margin-right: 100px;
+  margin: 0 auto 0 0;
+  padding-block: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
+  padding-right: clamp(4rem, 2.5142857143rem + 3.8095238095vw, 8rem);
+  padding-left: 0;
+  box-sizing: border-box;
 }
-
-section.home-doctor .doctor-image {
+section.home-doctor .content-wrap h2.heading {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 100px;
+  right: 0;
+  padding: 0 10px 0 0;
+}
+section.home-doctor .content-wrap .doctor-image {
   grid-area: image;
   position: relative;
+  background: #ccc;
+  border-radius: 0 50px 50px 0;
+  height: max-content;
+  max-width: 500px;
 }
-
-section.home-doctor .doctor-image img {
-  position: absolute;
-  right: -100px;
-  bottom: 0;
-  max-width: 600px;
+section.home-doctor .content-wrap .doctor-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-
-section.home-doctor .doctor-content {
+section.home-doctor .content-wrap .doctor-content {
   position: relative;
   grid-area: content;
+  padding: 2rem 0;
 }
-
-section.home-doctor .doctor-content .headline,
-section.home-doctor .doctor-content .catch {
+section.home-doctor .content-wrap .doctor-content .headline,
+section.home-doctor .content-wrap .doctor-content .catch {
   text-align: left;
 }
-
-section.home-doctor .doctor-catch {
-  margin: 40px 0;
-  font-size: 1.8rem;
-  line-height: 1.8;
+section.home-doctor .content-wrap .doctor-content .doctor-catch {
+  font-size: clamp(1.2rem, 0.9028571429rem + 0.7619047619vw, 2rem);
+  padding-bottom: 2rem;
+  line-height: 2.2rem;
 }
-
-section.home-doctor .doctor-message {
-  font-size: 1rem;
-  line-height: 2.2;
+section.home-doctor .content-wrap .doctor-content .doctor-message {
+  line-height: 1.6;
+  padding-bottom: 1.5rem;
 }
-
-section.home-doctor .doctor-name {
-  margin: 10px 0 150px;
-  font-size: 1.5rem;
+section.home-doctor .content-wrap .doctor-content .doctor-name {
+  margin: 10px 0 0;
+  font-size: clamp(1.5rem, 1.3142857143rem + 0.4761904762vw, 2rem);
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  font-weight: normal;
 }
-
-section.home-doctor .doctor-sign {
+section.home-doctor .content-wrap .doctor-content .doctor-sign {
   position: relative;
 }
-
-section.home-doctor .doctor-name span {
-  font-size: 1.2rem;
-  margin-left: 30px;
-  color: #555555;
+section.home-doctor .content-wrap .doctor-content .position {
+  margin: 30px 0 20px;
 }
-
-section.home-doctor .position {
-  margin: 50px 0 0;
-  font-size: 1.2rem;
-}
-
-section.home-doctor .sign {
+section.home-doctor .content-wrap .doctor-content .sign {
   position: absolute;
-  bottom: -60px;
-  right: -50px;
+  bottom: -10px;
+  left: 150px;
   transform: rotate(350deg);
-  font-size: 5rem;
-  font-family: "filmotype-lacrosse", sans-serif;
+  font-size: clamp(2rem, 1.2571428571rem + 1.9047619048vw, 4rem);
+  font-family: "tangerine", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ccb07a;
   opacity: 0.8;
 }
-
-section.home-doctor .index_cb_button a {
-  color: #ffffff;
-  background: #c9ab53;
-}
-
-section.home-doctor .index_cb_button a:hover {
-  background: #66572a;
-}
-
-.doctor-profile {
+section.home-doctor .content-wrap .doctor-profile {
   grid-area: profile;
-  margin: 0 0 60px;
-  padding: 40px;
+  margin: 0;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid #e7dbc1;
   border-radius: 10px;
   height: fit-content;
+  font-size: 10px;
 }
-
-.doctor-profile .title {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+section.home-doctor .content-wrap .doctor-profile .title {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
 }
-
-.doctor-profile .item:not(:last-child) {
-  margin-bottom: 35px;
+section.home-doctor .content-wrap .doctor-profile .item:not(:last-child) {
+  margin-bottom: 20px;
 }
-
-.doctor-profile ul li {
-  line-height: 2;
+section.home-doctor .content-wrap .doctor-profile ul li {
+  line-height: 1.6;
 }
-
-section.home-doctor .doctor-image-sp,
-section.home-doctor .index_cb_button.sp {
-  display: none;
-}
-
-@media (max-width: 1250px) {
+@media (max-width: 1439px) {
   section.home-doctor .content-wrap {
-    grid-template-columns: 40% 1fr;
-    grid-template-areas: "image content" "profile profile";
+    grid-template-columns: minmax(0, 400px) 1fr;
+    grid-template-areas: "heading heading" "image content" "profile profile";
+    padding-right: 0;
     margin: 0;
   }
-  section.home-doctor .sign {
-    right: auto;
-    left: 18%;
+  section.home-doctor .content-wrap h2.heading {
+    grid-area: heading;
+    position: relative;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    top: 0;
+    padding: 0 0 60px 0;
   }
-  .doctor-profile {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 30px;
-    border-left: none;
-    border-radius: 0 10px 10px 0;
+  section.home-doctor .content-wrap .doctor-image {
+    padding-left: clamp(1rem, 0.2571428571rem + 1.9047619048vw, 3rem);
+  }
+  section.home-doctor .content-wrap .doctor-content {
+    padding: 0;
+  }
+  section.home-doctor .content-wrap .doctor-profile {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  section.home-doctor .content-wrap .doctor-content .position {
+    margin: 0 0 20px;
   }
 }
 @media (max-width: 767px) {
   section.home-doctor .content-wrap {
     grid-template-columns: 1fr;
-    grid-template-areas: "content" "image" "profile";
+    grid-template-areas: "heading" "image" "content" "profile";
+    padding: 120px 0;
     margin: 0 auto;
   }
-  section.home-doctor .doctor-image img.pc {
-    display: none;
+  section.home-doctor .content-wrap .doctor-image {
+    padding-left: 0;
+    margin: 0 auto 10px;
   }
-  section.home-doctor .doctor-catch {
-    font-size: 1.2rem;
+  section.home-doctor .content-wrap .doctor-image img {
+    aspect-ratio: 1/1;
+    object-position: center top;
+  }
+  section.home-doctor .content-wrap .doctor-content .doctor-catch {
     text-align: center;
   }
-  section.home-doctor .doctor-content .headline,
-  section.home-doctor .doctor-content .catch {
-    text-align: center;
-  }
-  section.home-doctor .doctor-sign {
+  section.home-doctor .content-wrap .doctor-content .doctor-sign {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    width: fit-content;
     gap: 10px;
-    margin: 20px 0;
+    margin: 20px auto;
   }
-  section.home-doctor .sign {
+  section.home-doctor .content-wrap .doctor-content .sign {
     position: relative;
     right: 10px;
     left: auto;
     bottom: -10px;
-    font-size: 3rem;
   }
-  section.home-doctor .position {
-    font-size: 0.8rem;
+  section.home-doctor .content-wrap .doctor-content .position {
+    font-size: 10px;
     margin-top: 0;
     white-space: nowrap;
   }
-  section.home-doctor .doctor-name {
+  section.home-doctor .content-wrap .doctor-content .doctor-name {
     display: block;
     margin-bottom: 0;
   }
-  section.home-doctor .doctor-name span {
-    margin: 10px 0 0;
-    display: block;
-    font-size: 1rem;
-  }
-  section.home-doctor .index_cb_button.pc {
-    display: none;
-  }
-  section.home-doctor .doctor-image-sp {
-    display: block;
-    text-align: center;
-  }
-  section.home-doctor .doctor-image-sp img {
-    max-width: 100%;
-    border-radius: 20px;
-  }
-  section.home-doctor .index_cb_button.sp {
-    display: block;
-    margin-top: 0 !important;
-  }
-  .doctor-profile {
-    margin-top: 20px;
-    border-left: 1px solid #e7dbc1;
-    border-radius: 10px;
-  }
 }
+
 /* お知らせ
 ---------------------------*/
 /* アクセス

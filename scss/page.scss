@@ -8,7 +8,7 @@
 ---------------------------*/
 section .content-wrap {
   max-width: 1680px;
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   padding: 60px 0;
 
@@ -32,7 +32,12 @@ section.home-campaign {
     max-width: 90%;
     margin: 0 auto;
 
+    @include mq(tb) {
+      max-width: 80%;
+    }
+
     @include mq(sp) {
+      max-width: 70%;
       h2 {
         text-align: center;
       }
@@ -361,7 +366,7 @@ section.home-concept {
         line-height: 1.6;
 
         h3 {
-          font-size: fluid(16, 20);
+          font-size: fluid(14, 20);
           padding-bottom: 2rem;
         }
         p {
@@ -422,6 +427,7 @@ section.home-doctor {
   background: #f5f5f5;
 
   .content-wrap {
+    width: 95%;
     position: relative;
     display: grid;
     column-gap: fluid(20, 50);
@@ -466,7 +472,7 @@ section.home-doctor {
       }
 
       .doctor-catch {
-        font-size: fluid(12, 20);
+        font-size: fluid(14, 20);
         padding-bottom: 2rem;
         line-height: 2.2rem;
       }
@@ -495,13 +501,14 @@ section.home-doctor {
 
       .sign {
         position: absolute;
-        bottom: -10px;
-        left: 150px;
+        bottom: 0;
+        left: 135px;
         transform: rotate(350deg);
-        font-size: fluid(30, 50);
+        font-size: fluid(20, 40);
         font-family: "shabby-chic", sans-serif;
         font-weight: 400;
         font-style: normal;
+        letter-spacing: -5px;
         opacity: 0.8;
       }
     }
@@ -566,6 +573,7 @@ section.home-doctor {
     }
 
     @include mq(sp) {
+      width: 90%;
       grid-template-columns: 1fr;
       grid-template-areas:
         "heading"
@@ -593,17 +601,17 @@ section.home-doctor {
           grid-template-columns: repeat(2, 1fr);
           justify-content: center;
           width: fit-content;
+          margin-top: 10px;
           gap: 10px;
         }
         .sign {
           position: relative;
-          right: 50px;
-          left: auto;
+          left: -35px;
           bottom: -10px;
         }
         .position {
           font-size: 10px;
-          margin-top: 0;
+          margin-bottom: 10px;
           white-space: nowrap;
         }
         .doctor-name {

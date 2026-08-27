@@ -324,7 +324,33 @@ get_header();
   </div>
 </section>
 
-
+<section class="home-news">
+  <div class="content-wrap">
+    <div id="news_header_list">
+      <?php
+      $post_num = 5;
+      $news_query = new WP_Query('post_type=news&posts_per_page=' . $post_num);
+      if ($news_query->have_posts()):
+      ?>
+        <ul>
+          <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
+            <li> <a href="<?php the_permalink() ?>">
+                <p class="date" style="color:<?php echo esc_attr($options['index_news_date_color']); ?>;">
+                  <time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>">
+                    <?php the_time('Y.m.j'); ?>
+                  </time>
+                </p>
+                <h4 class="title"><span>
+                    <?php the_title(); ?>
+                  </span></h4>
+              </a> </li>
+          <?php endwhile;  ?>
+        </ul>
+      <?php endif;
+      wp_reset_query(); ?>
+    </div>
+  </div>
+</section>
 
 
 <!-- javaScriptエラー回避のため挿入 -->

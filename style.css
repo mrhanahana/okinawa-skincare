@@ -1623,7 +1623,6 @@ ul.doctor-list .title-area {
 }
 #news_header_list ul {
   border-top: 1px dotted #ccc;
-  padding: 15px 0 0 0;
   margin: 0;
 }
 #news_header_list li {
@@ -2439,11 +2438,11 @@ ul li:hover .more:after {
 }
 /* fadeUp
 ------------------------------------ */
-.fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+.fadeUpTrigger {
   opacity: 0;
+}
+.fadeUp {
+  animation: fadeUpAnime 0.5s forwards;
 }
 @keyframes fadeUpAnime {
   from {
@@ -2455,10 +2454,38 @@ ul li:hover .more:after {
     transform: translateY(0);
   }
 }
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.fadeUpTrigger {
-  opacity: 0;
+
+/* 右から左へ */
+.fadeRight {
+  animation: fadeRightAnime 0.5s forwards;
 }
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 左から右へ */
+.fadeLeft {
+  animation: fadeLeftAnime 0.5s forwards;
+}
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .delay-time01 {
 }
 .delay-time02 {

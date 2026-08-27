@@ -543,6 +543,34 @@ section.home-doctor .content-wrap .doctor-profile ul li {
 
 /* お知らせ
 ---------------------------*/
+section.home-news {
+  background: #f5f5f5;
+}
+section.home-news .content-wrap {
+  width: 90%;
+  margin: 0 0 auto 0;
+  padding: 0 0 60px;
+}
+section.home-news .content-wrap .home-news__inner {
+  background-color: var(--color-white);
+  padding: 50px;
+  border-radius: 0 50px 50px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+section.home-news .content-wrap .home-news__list li {
+  border-top: 1px solid var(--color-gray);
+}
+section.home-news .content-wrap .home-news__list li a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px 0;
+}
+section.home-news .content-wrap .home-news__list li:last-child {
+  border-bottom: 1px solid var(--color-gray);
+}
+
 /* アクセス
 ---------------------------*/
 section#access {

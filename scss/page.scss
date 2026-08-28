@@ -32,6 +32,17 @@ section.home-campaign {
     max-width: 90%;
     margin: 0 auto;
 
+    #index_campaign_slider_top {
+      visibility: hidden;
+      opacity: 0;
+
+      &.slick-initialized {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    }
+
     @include mq(tb) {
       max-width: 80%;
     }
@@ -750,6 +761,9 @@ section.home-access {
     }
   }
 }
+
+/* フッター
+---------------------------*/
 
 /* ========================================
    archive-service

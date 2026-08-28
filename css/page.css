@@ -33,6 +33,15 @@ section.home-campaign .campaign__wrap {
   max-width: 90%;
   margin: 0 auto;
 }
+section.home-campaign .campaign__wrap #index_campaign_slider_top {
+  visibility: hidden;
+  opacity: 0;
+}
+section.home-campaign .campaign__wrap #index_campaign_slider_top.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 @media (max-width: 1023px) {
   section.home-campaign .campaign__wrap {
     max-width: 80%;
@@ -656,6 +665,8 @@ section.home-access dl dd strong {
   }
 }
 
+/* フッター
+---------------------------*/
 /* ========================================
    archive-service
 ======================================== */

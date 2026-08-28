@@ -43,7 +43,7 @@ get_header();
   </div>
 </section>
 
-<section class="home-search">
+<section class="home-search fadeUpTrigger">
   <div class="content-wrap">
     <h2 class="heading">Menu</h2>
     <div class="info flexC">
@@ -252,7 +252,7 @@ get_header();
   </div>
 </section>
 
-<section class="home-concept">
+<section class="home-concept fadeUpTrigger">
   <div class="content-wrap">
     <div class="concept__content">
       <h2 class="heading gold">Concept</h2>
@@ -269,7 +269,7 @@ get_header();
   </div>
 </section>
 
-<section class="home-doctor">
+<section class="home-doctor fadeUpTrigger">
   <div class="content-wrap">
     <h2 class="heading gold">Doctor</h2>
     <div class="doctor-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_y.maeda.webp" alt="前田由紀" /></div>
@@ -364,9 +364,10 @@ get_header();
   </div>
 </section>
 
-<section id="access">
+<section class="home-access fadeUpTrigger" data-animation="fadeLeft">
+  <h2 class="heading">Access</h2>
   <div class="flexB">
-    <div class="map-area">
+    <div class=" map-area">
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2580.237831459924!2d127.67773853395724!3d26.21551477201746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569e38a454b17%3A0x9ceb4d63ce9d7ef8!2z5rKW57iE44K544Kt44Oz44Kx44Ki44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1782699163249!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>

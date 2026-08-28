@@ -582,73 +582,80 @@ section.home-news .content-wrap .home-news__list li:last-child {
 
 /* アクセス
 ---------------------------*/
-section#access {
-  padding: 120px 0;
+section.home-access {
+  position: relative;
+  padding-block: clamp(5rem, 3.1428571429rem + 4.7619047619vw, 10rem);
   background: #f5f5f5;
 }
-
-section#access .map-area {
+section.home-access h2.heading {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 100px;
+  right: 0;
+  padding: 0 10px 0 0;
+}
+section.home-access .map-area {
   width: 50%;
   border-radius: 0 50px 50px 0;
   overflow: hidden;
 }
-
-section#access .map-area .map {
+section.home-access .map-area .map {
   position: relative;
   padding-bottom: 400px;
   height: 0;
   overflow: hidden;
   filter: grayscale(100%);
 }
-
-section#access .map-area .map iframe {
+section.home-access .map-area .map iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-
-section#access .text-area {
+section.home-access .text-area {
   width: calc(50% - 5rem);
   padding-right: 1rem;
   box-sizing: border-box;
 }
-
-section#access .index_title > * {
-  text-align: left;
-}
-
-section#access dl {
+section.home-access dl {
   display: grid;
   grid-template-columns: 4rem 1fr;
-  gap: 1rem 2rem;
+  gap: 2.5rem 2rem;
   line-height: 1.8rem;
 }
-
-section#access dl dd strong {
+section.home-access dl dt {
+  font-weight: bold;
+  letter-spacing: 5%;
+}
+section.home-access dl dd strong {
   color: var(--color-theme-sub);
 }
-
-@media (max-width: 999px) {
-  section#access {
-    padding: 60px 0;
+@media (max-width: 1023px) {
+  section.home-access h2.heading {
+    position: relative;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    top: 0;
+    padding: 0 0 60px 0;
   }
-  section#access > div {
+  section.home-access > div {
     flex-direction: column-reverse;
   }
-  section#access .index_title > * {
-    text-align: center;
-  }
-  section#access .text-area {
+  section.home-access .text-area {
     width: auto;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.5rem;
     padding: 0 15px;
   }
-  section#access .map-area {
+  section.home-access .map-area {
     width: auto;
+    border-radius: 0;
+  }
+  section.home-access dl {
+    gap: 1.5rem 1rem;
   }
 }
+
 /* ========================================
    archive-service
 ======================================== */

@@ -2442,7 +2442,7 @@ ul li:hover .more:after {
   opacity: 0;
 }
 .fadeUp {
-  animation: fadeUpAnime 0.5s forwards;
+  animation: fadeUpAnime 0.8s forwards;
 }
 @keyframes fadeUpAnime {
   from {
@@ -2457,7 +2457,7 @@ ul li:hover .more:after {
 
 /* 右から左へ */
 .fadeRight {
-  animation: fadeRightAnime 0.5s forwards;
+  animation: fadeRightAnime 0.8s forwards;
 }
 @keyframes fadeRightAnime {
   from {
@@ -2473,7 +2473,7 @@ ul li:hover .more:after {
 
 /* 左から右へ */
 .fadeLeft {
-  animation: fadeLeftAnime 0.5s forwards;
+  animation: fadeLeftAnime 0.8s forwards;
 }
 @keyframes fadeLeftAnime {
   from {

@@ -61,6 +61,64 @@
   filter: brightness(1.2);
 }
 
+/* view more
+---------------------------*/
+.viewMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-black);
+  font-size: fluid(6, 8);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+
+  &__arrow {
+    position: relative;
+    display: block;
+    width: 80px; // ホバー後のスペースを先に確保
+    height: 10px;
+    flex-shrink: 0;
+
+    // 横線
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 65px;
+      height: 1px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    // 斜めに上がる矢印の先端
+    &::after {
+      content: "";
+      position: absolute;
+      left: 57px;
+      bottom: 0;
+      width: 9px;
+      height: 1px;
+      background-color: currentColor;
+      transform: rotate(35deg);
+      transform-origin: right bottom;
+      transition: left 0.3s ease;
+    }
+  }
+
+  &:hover {
+    .viewMore__arrow {
+      &::before {
+        width: 80px;
+      }
+
+      &::after {
+        left: 70px;
+      }
+    }
+  }
+}
+
 /* read more
 ---------------------------*/
 .button-more {

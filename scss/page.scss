@@ -115,61 +115,6 @@ section.home-search {
     font-family: YakuHanMP, "Noto Serif JP", serif;
   }
 
-  .viewMore {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    color: #000;
-    font-size: fluid(6, 8);
-    letter-spacing: 0.08em;
-    text-decoration: none;
-
-    &__arrow {
-      position: relative;
-      display: block;
-      width: 80px; // ホバー後のスペースを先に確保
-      height: 10px;
-      flex-shrink: 0;
-
-      // 横線
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 65px;
-        height: 1px;
-        background-color: currentColor;
-        transition: width 0.3s ease;
-      }
-
-      // 斜めに上がる矢印の先端
-      &::after {
-        content: "";
-        position: absolute;
-        left: 57px;
-        bottom: 0;
-        width: 9px;
-        height: 1px;
-        background-color: currentColor;
-        transform: rotate(35deg);
-        transform-origin: right bottom;
-        transition: left 0.3s ease;
-      }
-    }
-
-    &:hover {
-      .viewMore__arrow {
-        &::before {
-          width: 80px;
-        }
-
-        &::after {
-          left: 70px;
-        }
-      }
-    }
-  }
   /* お悩みから探す
 ---------------------------*/
 
@@ -629,6 +574,7 @@ section.home-news {
   background: #f5f5f5;
 
   .content-wrap {
+    position: relative;
     width: 90%;
     margin: 0 0 auto 0;
     padding: 0 0 60px;
@@ -636,12 +582,37 @@ section.home-news {
     .home-news {
       &__inner {
         background-color: var(--color-white);
-        padding: 50px;
+        padding-block: fluid(40, 80);
+        padding-right: fluid(20, 80);
         border-radius: 0 50px 50px 0;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 2fr 3fr;
+        gap: fluid(30, 80);
+        align-items: stretch;
+
+        .heading {
+          grid-column: 1 / 3;
+          padding: 0;
+          position: absolute;
+          top: -30px;
+          left: 50px;
+          z-index: 1;
+        }
       }
       &__image {
+        overflow: hidden;
+        border-radius: 0 50px 50px 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &__btn {
+        padding-bottom: 10px;
+        text-align: right;
       }
       &__list {
         li {
@@ -650,11 +621,40 @@ section.home-news {
             display: flex;
             justify-content: start;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
+            gap: fluid(10, 50);
+
+            .date {
+              font-family: "roboto", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              font-size: fluid(8, 9);
+              letter-spacing: 5%;
+              background-color: var(--color-theme2);
+              padding: 7px 13px;
+              border-radius: 5px;
+            }
+            .title {
+              line-height: 1.2;
+            }
           }
           &:last-child {
             border-bottom: 1px solid var(--color-gray);
           }
+        }
+      }
+    }
+    @include mq(tb) {
+      width: 95%;
+    }
+
+    @include mq(sp) {
+      .home-news {
+        &__inner {
+          grid-template-columns: 1fr;
+        }
+        &__list {
+          padding-left: fluid(20, 80);
         }
       }
     }
@@ -664,12 +664,13 @@ section.home-news {
 /* アクセス
 ---------------------------*/
 section#access {
-  background: #f5f1ee;
   padding: 120px 0;
-  font-size: 16px;
+  background: #f5f5f5;
 }
 section#access .map-area {
   width: 50%;
+  border-radius: 0 50px 50px 0;
+  overflow: hidden;
 }
 section#access .map-area .map {
   position: relative;
@@ -700,7 +701,7 @@ section#access dl {
   line-height: 1.8rem;
 }
 section#access dl dd strong {
-  color: #66572a;
+  color: var(--color-theme-sub);
 }
 @media (max-width: 999px) {
   section#access {
@@ -742,7 +743,7 @@ section#access dl dd strong {
   .service_archive_heading {
     position: relative;
     margin: 0 0 50px;
-    padding-bottom: 20px;
+    padding: 50px 0 20px;
     font-size: 32px;
     font-weight: 500;
     line-height: 1.5;
@@ -766,7 +767,7 @@ section#access dl dd strong {
   }
 
   .service_archive_group {
-    padding: 34px 38px 38px;
+    padding: 40px 38px 38px;
     transition:
       border-color 0.3s ease,
       box-shadow 0.3s ease;

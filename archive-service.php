@@ -93,7 +93,7 @@ if ($use_overlay) {
 
       <?php if (!is_wp_error($concern_terms) && !empty($concern_terms)) : ?>
         <section class="service_archive_section service_archive_concern">
-          <h2 class="service_archive_heading rich_font">お悩みから探す</h2>
+          <h2 id="service_concern" class="service_archive_heading rich_font">お悩みから探す</h2>
 
           <div class="service_archive_groups">
 
@@ -160,7 +160,7 @@ if ($use_overlay) {
 
       <?php if (!is_wp_error($treatment_terms) && !empty($treatment_terms)) : ?>
         <section class="service_archive_section service_archive_treatment">
-          <h2 class="service_archive_heading rich_font">施術から探す</h2>
+          <h2 id="service_treatment" class="service_archive_heading rich_font">施術から探す</h2>
 
           <div class="service_archive_groups">
 

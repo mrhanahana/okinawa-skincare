@@ -51,7 +51,7 @@ get_header();
         <div>
           <div class="search__heading">
             <h3 class="headLine">お悩みから探す</h3>
-            <a href="#" class="viewMore">
+            <a href="/service/#service_concern" class="viewMore">
               <span>VIEW MORE</span>
               <span class="viewMore__arrow" aria-hidden="true"></span>
             </a>
@@ -123,7 +123,7 @@ get_header();
         <div>
           <div class="search__heading">
             <h3 class="headLine">施術から探す</h3>
-            <a href="#" class="viewMore">
+            <a href="/service/#service_treatment" class="viewMore">
               <span>VIEW MORE</span>
               <span class="viewMore__arrow" aria-hidden="true"></span>
             </a>
@@ -285,7 +285,7 @@ get_header();
         </div>
         <div class="sign">Yuki Maeda</div>
       </div>
-      <a href="/about/" class="button-more right mt50">Read More</a>
+      <a href="/about/#doctor" class="button-more right mt50">Read More</a>
     </div>
     <aside class="doctor-profile">
       <div class="item">
@@ -327,33 +327,42 @@ get_header();
 <section class="home-news">
   <div class="content-wrap">
     <div class="home-news__inner fadeUpTrigger" data-animation="fadeLeft">
-      <div class="home-news__image"></div>
-      <?php
-      $post_num = 5;
-      $news_query = new WP_Query('post_type=news&posts_per_page=' . $post_num);
-      if ($news_query->have_posts()):
-      ?>
-        <ul class="home-news__list">
-          <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
-            <li> <a href="<?php the_permalink() ?>">
-                <p class="date" style="color:<?php echo esc_attr($options['index_news_date_color']); ?>;">
-                  <time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>">
-                    <?php the_time('Y.m.d'); ?>
-                  </time>
-                </p>
-                <h4 class="title"><span>
-                    <?php the_title(); ?>
-                  </span></h4>
-              </a> </li>
-          <?php endwhile;  ?>
-        </ul>
-      <?php endif;
-      wp_reset_query(); ?>
+      <h2 class="heading">News</h2>
+      <div class="home-news__image">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_news.webp" alt="お知らせ" />
+      </div>
+      <div class="home-news__list">
+        <div class="home-news__btn">
+          <a href="/news/" class="viewMore">
+            <span>VIEW MORE</span>
+            <span class="viewMore__arrow" aria-hidden="true"></span>
+          </a>
+        </div>
+        <?php
+        $post_num = 5;
+        $news_query = new WP_Query('post_type=news&posts_per_page=' . $post_num);
+        if ($news_query->have_posts()):
+        ?>
+          <ul>
+            <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
+              <li> <a href="<?php the_permalink() ?>">
+                  <p class="date" style="color:<?php echo esc_attr($options['index_news_date_color']); ?>;">
+                    <time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>">
+                      <?php the_time('Y.m.d'); ?>
+                    </time>
+                  </p>
+                  <div class="title"><span>
+                      <?php the_title(); ?>
+                    </span></div>
+                </a> </li>
+            <?php endwhile;  ?>
+          </ul>
+        <?php endif;
+        wp_reset_query(); ?>
+      </div>
     </div>
   </div>
 </section>
-
-
 
 <section id="access">
   <div class="flexB">
@@ -363,10 +372,6 @@ get_header();
       </div>
     </div>
     <div class="text-area">
-      <div class="index_title pt0">
-        <h2 class="headline rich_font_type2">ACCESS</h2>
-        <h3 class="catch rich_font_type3 mb20">アクセス</h3>
-      </div>
       <dl>
         <dt>住所</dt>
         <dd>〒900-0015<br>

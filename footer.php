@@ -69,18 +69,6 @@ if ($options['show_footer_company_info'] || $options['show_footer_info1'] || $op
   </div><!-- END #footer_information -->
 <?php }; ?>
 
-<div class="float-button__wrap"><a href="/reserve/">ご予約は<br>
-    こちら</a>
-  <div class="circleTextWrap">
-    <svg class="circleText" viewBox="0 0 100 100">
-      <path id="circle" class="circleText__circle" d="M 0 50 A 50 50 0 1 1 0 51 z" />
-      <text class="circleText__text">
-        <textPath xlink:href="#circle">OKINAWA SKINCARE CLINIC — RESERVATION — </textPath>
-      </text>
-    </svg>
-  </div>
-</div>
-
 <div id="footer_menu_area" style="background:<?php echo esc_attr($options['footer_menu_bg_color']); ?>;">
   <div id="footer_menu_area_inner" class="clearfix">
     <?php // footer menu -------------------------------------------- 
@@ -226,6 +214,18 @@ if (is_mobile()) {
 ?>
 
 </div><!-- #container -->
+
+<div class="float-button__wrap"><a href="/reserve/">ご予約は<br>
+    こちら</a>
+  <div class="circleTextWrap">
+    <svg class="circleText" viewBox="0 0 100 100">
+      <path id="circle" class="circleText__circle" d="M 0 50 A 50 50 0 1 1 0 51 z" />
+      <text class="circleText__text">
+        <textPath xlink:href="#circle">OKINAWA SKINCARE CLINIC — RESERVATION — </textPath>
+      </text>
+    </svg>
+  </div>
+</div>
 
 <div class="drawer-overlay"></div>
 <nav id="drawer-nav">

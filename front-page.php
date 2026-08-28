@@ -396,7 +396,4 @@ get_header();
 <!-- javaScriptエラー回避のため挿入 -->
 <div id="index_box_content"></div>
 
-</div>
-<!-- END #index_content -->
-
 <?php get_footer(); ?>

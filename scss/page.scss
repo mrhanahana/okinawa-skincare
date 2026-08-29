@@ -661,6 +661,7 @@ section.home-news {
       .home-news {
         &__inner {
           grid-template-columns: 1fr;
+          gap: 0;
         }
         &__list {
           padding-left: fluid(20, 80);

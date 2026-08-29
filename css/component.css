@@ -117,7 +117,7 @@
 
 /* read more
 ---------------------------*/
-.button-more {
+#container .button-more {
   position: relative;
   display: block;
   width: fit-content;
@@ -126,10 +126,10 @@
   line-height: 1;
   cursor: pointer;
 }
-.button-more.right {
+#container .button-more.right {
   margin-left: auto;
 }
-.button-more::before {
+#container .button-more::before {
   position: absolute;
   content: "";
   width: 20px;
@@ -142,7 +142,7 @@
   transform: translateY(-50%);
   transition: background-color 0.5s;
 }
-.button-more::after {
+#container .button-more::after {
   position: absolute;
   content: "";
   width: 50px;
@@ -153,10 +153,10 @@
   transform: translateY(-50%);
   transition: transform 0.5s;
 }
-.button-more:hover::before {
+#container .button-more:hover::before {
   background-color: #c9ab53;
 }
-.button-more:hover::after {
+#container .button-more:hover::after {
   transform: translate(10px, -50%);
 }
 

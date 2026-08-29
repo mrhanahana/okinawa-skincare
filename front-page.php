@@ -264,7 +264,7 @@ get_header();
         <p>院内はプライバシーに配慮した完全個室です。周囲を気にせず、心からくつろいで施術を受けていただける、上質で居心地の良い空間を整えています。</p>
         <a href="/about/" class="button-more right mt50">Read More</a>
       </div>
-      <div class="concept__image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_concept.webp" /></div>
+      <div class="concept__image parallax-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_concept.webp" /></div>
     </div>
   </div>
 </section>
@@ -328,7 +328,7 @@ get_header();
   <div class="content-wrap">
     <div class="home-news__inner fadeUpTrigger" data-animation="fadeLeft">
       <h2 class="heading">News</h2>
-      <div class="home-news__image">
+      <div class="home-news__image  parallax-image">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_news.webp" alt="お知らせ" />
       </div>
       <div class="home-news__list">

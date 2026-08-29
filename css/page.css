@@ -321,6 +321,7 @@ section.home-concept .content-wrap .concept__image img {
     margin: 0 auto 10px;
   }
   section.home-concept .content-wrap .concept__image img {
+    position: relative;
     height: auto;
     aspect-ratio: 4/3;
     border-radius: 30px 0 0 30px;
@@ -581,7 +582,9 @@ section.home-news .content-wrap .home-news__list li:last-child {
 @media (max-width: 767px) {
   section.home-news .content-wrap .home-news__inner {
     grid-template-columns: 1fr;
-    gap: 0;
+  }
+  section.home-news .content-wrap .home-news__image img {
+    position: relative;
   }
   section.home-news .content-wrap .home-news__list {
     padding-left: clamp(2rem, -0.2285714286rem + 5.7142857143vw, 8rem);

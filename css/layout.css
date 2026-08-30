@@ -91,6 +91,9 @@
 #drawer-nav .utility-nav__item::after {
   background: none;
 }
+#drawer-nav .reservation-info {
+  margin-bottom: 50px;
+}
 #drawer-nav .reservation-info__inner {
   width: 90%;
 }

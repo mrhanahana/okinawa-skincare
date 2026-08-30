@@ -220,18 +220,6 @@ section.home-search .treatmentList li .title.close::after {
 section.home-search .treatmentList li .title:hover {
   transform: translateX(5px);
 }
-section.home-search .treatmentList li .treatmentItem a {
-  display: block;
-  border: 1px solid var(--color-theme);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  padding-block: 10px;
-}
-section.home-search .treatmentList li .treatmentItem a:hover {
-  color: var(--color-white);
-  background-color: var(--color-theme);
-}
 @media (max-width: 1023px) {
   section.home-search .info {
     display: block;
@@ -258,7 +246,21 @@ section.home-search .treatmentList li .treatmentItem a:hover {
     max-width: 100px;
   }
 }
-section.home-search .popup-content {
+
+.treatmentItem a {
+  display: block;
+  border: 1px solid var(--color-theme);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-block: 10px;
+}
+.treatmentItem a:hover {
+  color: var(--color-white);
+  background-color: var(--color-theme);
+}
+
+.popup-content {
   box-sizing: border-box;
   padding-inline: clamp(2rem, 1.2571428571rem + 1.9047619048vw, 4rem);
   padding-bottom: clamp(2rem, 1.2571428571rem + 1.9047619048vw, 4rem);

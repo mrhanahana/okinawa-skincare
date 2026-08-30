@@ -244,21 +244,6 @@ section.home-search {
           transform: translateX(5px);
         }
       }
-      .treatmentItem {
-        a {
-          display: block;
-          border: 1px solid var(--color-theme);
-          border-radius: 10px;
-          margin-bottom: 10px;
-          text-align: center;
-          padding-block: 10px;
-
-          &:hover {
-            color: var(--color-white);
-            background-color: var(--color-theme);
-          }
-        }
-      }
     }
   }
   @include mq(tb) {
@@ -289,11 +274,26 @@ section.home-search {
       }
     }
   }
-  .popup-content {
-    box-sizing: border-box;
-    padding-inline: fluid(20, 40);
-    padding-bottom: fluid(20, 40);
+}
+.treatmentItem {
+  a {
+    display: block;
+    border: 1px solid var(--color-theme);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-block: 10px;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-theme);
+    }
   }
+}
+.popup-content {
+  box-sizing: border-box;
+  padding-inline: fluid(20, 40);
+  padding-bottom: fluid(20, 40);
 }
 
 /* Concept

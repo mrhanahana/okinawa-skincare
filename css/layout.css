@@ -148,7 +148,7 @@ ul#drawernavul li .sub-menu li a {
 ======================================== */
 footer {
   background-color: var(--color-theme-sub);
-  border-radius: 100px 0 0 0;
+  border-radius: var(--border-radius) 0 0 0;
 }
 footer .footer__inner {
   width: 90%;

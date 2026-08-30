@@ -338,7 +338,7 @@ section.home-concept {
         grid-area: image;
         min-width: 0;
         min-height: 0;
-        border-radius: 50px 0 0 50px;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
         overflow: hidden;
 
         img {
@@ -412,7 +412,7 @@ section.home-doctor {
       grid-area: image;
       position: relative;
       background: #ccc;
-      border-radius: 0 50px 50px 0;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
       height: max-content;
       max-width: 500px;
 
@@ -600,7 +600,7 @@ section.home-news {
         background-color: var(--color-white);
         padding-block: fluid(40, 80);
         padding-right: fluid(20, 80);
-        border-radius: 0 50px 50px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: fluid(30, 80);
@@ -617,7 +617,7 @@ section.home-news {
       }
       &__image {
         overflow: hidden;
-        border-radius: 0 50px 50px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
         overflow: hidden;
 
         img {
@@ -716,7 +716,7 @@ section.home-access {
 
   .map-area {
     width: 50%;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     overflow: hidden;
 
     .map {
@@ -841,17 +841,17 @@ section.home-access {
 
   .service_archive_term_title {
     position: relative;
-    margin: 0 0 24px;
-    padding: 0 0 15px 18px;
-    border-bottom: 1px solid var(--service-border-color);
+    margin: 0 0 10px;
+    padding: 15px 0 15px 18px;
     font-size: 22px;
     font-weight: 500;
     line-height: 1.5;
+    background: #f7f7f8;
 
     &::before {
       position: absolute;
-      top: 0.25em;
-      bottom: calc(0.25em + 15px);
+      top: 0;
+      bottom: 0;
       left: 0;
       width: 3px;
       background-color: var(--service-main-color);
@@ -953,12 +953,8 @@ section.home-access {
 
     .service_archive_term_title {
       margin-bottom: 15px;
-      padding: 0 0 12px 14px;
+      padding: 12px 0 12px 14px;
       font-size: 19px;
-
-      &::before {
-        bottom: calc(0.25em + 12px);
-      }
     }
 
     .service_archive_list {

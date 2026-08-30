@@ -1,3 +1,6 @@
+@charset "utf-8";
+@use "global" as *;
+
 /* ドロワーメニュー
 ---------------------------*/
 .menu-button {
@@ -138,4 +141,157 @@ ul#drawernavul {
       }
     }
   }
+}
+
+/* ========================================
+   footer
+======================================== */
+footer {
+  background-color: var(--color-theme-sub);
+  border-radius: 100px 0 0 0;
+
+  .footer {
+    &__inner {
+      width: 90%;
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &__main {
+      display: grid;
+      grid-template-columns: 1fr 50%;
+      grid-column-gap: 2rem;
+      -moz-column-gap: 2rem;
+      column-gap: 2rem;
+      padding-top: fluid(20, 80);
+      padding-bottom: 50px;
+    }
+
+    &__logo {
+      grid-column: 1;
+      grid-row: 1;
+      margin-top: 1rem;
+
+      a {
+        display: inline-block;
+      }
+
+      img {
+        width: 250px;
+      }
+
+      &-reader {
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        clip: rect(1px 1px 1px 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+    }
+
+    &__desc {
+      grid-column: 1;
+      grid-row: 2;
+      margin-top: 50px;
+      color: var(--color-gray);
+    }
+
+    &__label {
+      align-items: center;
+      border: 1px solid;
+      border-radius: 0.5rem;
+      display: flex;
+      font-size: 13px;
+      width: 120px;
+      height: 32px;
+      justify-content: center;
+    }
+
+    &__about {
+      line-height: 1.6;
+      letter-spacing: 2px;
+      margin-top: 15px;
+    }
+
+    &__nav {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &__sub {
+      font-size: 12px;
+      border-top: 1px solid var(--color-theme2);
+      text-align: center;
+      color: var(--color-theme2);
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @include mq(tb) {
+    .footer {
+      &__main {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      &__label {
+        margin: 0 auto;
+      }
+
+      &__cta {
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+    .utility-nav__list {
+      margin: 0 auto;
+    }
+  }
+  @include mq(sp) {
+    .utility-nav__list {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+
+    .utility-nav__item {
+      flex: 50%;
+
+      &:nth-child(odd)::after {
+        background-color: rgba(255, 255, 255, 0.35);
+      }
+
+      &:nth-child(even)::after {
+        background: none;
+      }
+    }
+
+    .reservation-info__buttons {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+    }
+
+    .reservation-info__schedule {
+      display: none;
+    }
+  }
+}
+
+/* captionを読み上げ専用にする */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

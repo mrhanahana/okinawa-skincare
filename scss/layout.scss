@@ -62,7 +62,7 @@
   top: 0;
   z-index: 9999;
   width: 80%;
-  max-width: 450px;
+  max-width: 600px;
   height: 100%;
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -74,20 +74,38 @@
     right: 0;
   }
 
-  .cta {
-    border: 1px solid var(--color-gray);
-    padding: 15px;
+  .logo {
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
 
-    .tel {
-      font-size: 2.5rem;
-      line-height: 3rem;
-      &::before {
-        font-size: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .utility-nav {
+    &__list {
+      margin: 0 auto;
+    }
+
+    &__item {
+      span {
+        display: none;
+      }
+
+      &::after {
+        background: none;
       }
     }
-    .mail {
-      margin-top: 1rem;
-      font-size: 1.5rem;
+  }
+  .reservation-info {
+    &__inner {
+      width: 90%;
+    }
+
+    &__text {
+      display: none;
     }
   }
 }
@@ -175,6 +193,11 @@ footer {
 
       a {
         display: inline-block;
+        transition: 0.8s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
       }
 
       img {

@@ -498,6 +498,15 @@ html.popup-open {
   display: inline-block;
   transform: rotate(5deg);
 }
+@media (max-width: 767px) {
+  .reservation-info__buttons {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+  .reservation-info__schedule {
+    display: none;
+  }
+}
 
 /* ========================================
    Utility Navigation

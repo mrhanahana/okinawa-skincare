@@ -544,6 +544,16 @@ html.popup-open {
       }
     }
   }
+  @include mq(sp) {
+    &__buttons {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+    }
+
+    &__schedule {
+      display: none;
+    }
+  }
 }
 
 /* ========================================

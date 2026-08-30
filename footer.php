@@ -177,6 +177,9 @@ if (is_mobile()) {
 
 <div class="drawer-overlay"></div>
 <nav id="drawer-nav">
+  <div class="logo">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/img_logo_mark_hr.svg" alt="<?php bloginfo('name'); ?>">
+  </div>
   <?php
   wp_nav_menu(array(
     'theme_location' => 'drawer-nav',
@@ -184,6 +187,97 @@ if (is_mobile()) {
     'items_wrap' => '<ul id="drawernavul" class="menu">%3$s</ul>',
   ));
   ?>
+  <nav class="utility-nav" aria-label="フッター関連リンク">
+    <ul class="utility-nav__list">
+      <li class="utility-nav__item">
+        <a
+          href="https://www.instagram.com/okinawa_skincare_clinic/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+
+      <li class="utility-nav__item">
+        <a
+          href="https://line.me/R/ti/p/@401dbayd"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-brands fa-line" aria-hidden="true"></i>
+          <span>公式LINE</span>
+        </a>
+      </li>
+
+      <li class="utility-nav__item">
+        <a href="/about/#access">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>アクセス</span>
+        </a>
+      </li>
+
+      <li class="utility-nav__item">
+        <a href="/recruit/">
+          <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
+          <span>親権者同意書</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="reservation-info" aria-labelledby="footer-reservation-title">
+    <div class="reservation-info__inner">
+      <div id="footer-reservation-title" class="reservation-info__title">
+        ご予約・お問い合わせ
+      </div>
+
+      <p class="reservation-info__text">
+        ご予約はWEBまたはお電話にて承っております。
+      </p>
+
+      <div class="reservation-info__buttons">
+        <a href="/reserve/" class="reservation-info__button is-web">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          <span>WEB予約</span>
+        </a>
+
+        <a href="tel:0988601001" class="reservation-info__button is-tel">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>098-860-1001</span>
+        </a>
+      </div>
+
+      <div class="reservation-info__schedule">
+        <table>
+          <caption class="screen-reader-text">診療時間</caption>
+          <thead>
+            <tr>
+              <th scope="col">診療時間</th>
+              <th scope="col">月</th>
+              <th scope="col">火</th>
+              <th scope="col">水</th>
+              <th scope="col">木</th>
+              <th scope="col">金</th>
+              <th scope="col">土</th>
+              <th scope="col">日</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">10:00〜19:00</th>
+              <td><span class="schedule-open">●</span></td>
+              <td><span class="schedule-open">●</span></td>
+              <td><span class="schedule-close">／</span></td>
+              <td><span class="schedule-close">／</span></td>
+              <td><span class="schedule-open">●</span></td>
+              <td><span class="schedule-open">●</span></td>
+              <td><span class="schedule-open">●</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 </nav>
 
 <?php

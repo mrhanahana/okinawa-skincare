@@ -210,7 +210,7 @@ if ($use_overlay) {
         </section>
       <?php endif; ?>
 
-
+      <!--
       <?php
       /* ========================================================
    * その他
@@ -258,6 +258,7 @@ if ($use_overlay) {
       <?php endif; ?>
 
       <?php wp_reset_postdata(); ?>
+              -->
 
     </div><!-- END #archive_service -->
 

@@ -99,22 +99,10 @@ if ($use_overlay) {
 
             <?php foreach ($concern_terms as $term) : ?>
               <?php
-              $concern_query = new WP_Query([
-                'post_type'      => 'service',
-                'post_status'    => 'publish',
-                'posts_per_page' => -1,
-                'orderby'        => [
-                  'menu_order' => 'ASC',
-                  'date'       => 'DESC',
-                ],
-                'tax_query'      => [
-                  [
-                    'taxonomy' => 'service_concern',
-                    'field'    => 'term_id',
-                    'terms'    => $term->term_id,
-                  ],
-                ],
-              ]);
+              $concern_query = theme_get_ordered_services_for_term(
+                'service_concern',
+                $term->term_id
+              );
               ?>
 
               <?php if ($concern_query->have_posts()) : ?>
@@ -166,22 +154,10 @@ if ($use_overlay) {
 
             <?php foreach ($treatment_terms as $term) : ?>
               <?php
-              $treatment_query = new WP_Query([
-                'post_type'      => 'service',
-                'post_status'    => 'publish',
-                'posts_per_page' => -1,
-                'orderby'        => [
-                  'menu_order' => 'ASC',
-                  'date'       => 'DESC',
-                ],
-                'tax_query'      => [
-                  [
-                    'taxonomy' => 'service_treatment',
-                    'field'    => 'term_id',
-                    'terms'    => $term->term_id,
-                  ],
-                ],
-              ]);
+              $treatment_query = theme_get_ordered_services_for_term(
+                'service_treatment',
+                $term->term_id
+              );
               ?>
 
               <?php if ($treatment_query->have_posts()) : ?>

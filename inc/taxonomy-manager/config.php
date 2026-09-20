@@ -31,6 +31,9 @@ function theme_get_custom_taxonomies()
             // 並び替え
             'sortable' => true,
 
+            // タームごとの施術並び替え
+            'service_orderable' => true,
+
         ],
 
 
@@ -60,6 +63,9 @@ function theme_get_custom_taxonomies()
 
             // 並び替え
             'sortable' => true,
+
+            // タームごとの施術並び替え
+            'service_orderable' => true,
 
         ],
 

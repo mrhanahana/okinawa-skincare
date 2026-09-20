@@ -163,22 +163,10 @@ get_header();
 
                 $english_name = $treatment_english_names[$term->name] ?? '';
 
-                $service_query = new WP_Query([
-                  'post_type'      => 'service',
-                  'post_status'    => 'publish',
-                  'posts_per_page' => -1,
-                  'orderby'        => [
-                    'menu_order' => 'ASC',
-                    'date'       => 'DESC',
-                  ],
-                  'tax_query'      => [
-                    [
-                      'taxonomy' => $taxonomy,
-                      'field'    => 'term_id',
-                      'terms'    => $term->term_id,
-                    ],
-                  ],
-                ]);
+                $service_query = theme_get_ordered_services_for_term(
+                  $taxonomy,
+                  $term->term_id
+                );
                 ?>
 
                 <?php if ($service_query->have_posts()) : ?>

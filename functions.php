@@ -133,6 +133,9 @@ require_once get_stylesheet_directory()
 require_once get_stylesheet_directory()
     . '/inc/taxonomy-manager/sort.php';
 
+require_once get_stylesheet_directory()
+    . '/inc/taxonomy-manager/service.php';
+
 
 /************************************************************************************** 
 /* SVGのアップロードを許可 */
